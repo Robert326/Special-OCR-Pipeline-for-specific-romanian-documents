@@ -28,6 +28,40 @@ def to_grayscale(image: np.ndarray) -> np.ndarray:
         return cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     return image
 
+def crop_to_content(gray_img: np.ndarray, threshold_ratio: float = 0.05, padding: int = 5) -> np.ndarray:
+    """
+    Crop the image to the content area using column/row projection.
+    Removes empty margins or zones with different paper texture.
+    
+    Args:
+        gray_img:        Grayscale image.
+        threshold_ratio: Fraction of max projection to consider as "content".
+        padding:         Extra pixels to keep around the content.
+    """
+    _, thresh = cv2.threshold(gray_img, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
+    h, w = thresh.shape
+    
+    # column projection (sum of pixels per column) -> detect left/right edges
+    col_sums = np.sum(thresh, axis=0)
+    col_threshold = col_sums.max() * threshold_ratio
+    content_cols = np.where(col_sums > col_threshold)[0]
+    
+    # row projection (sum of pixels per row) -> detect top/bottom edges
+    row_sums = np.sum(thresh, axis=1)
+    row_threshold = row_sums.max() * threshold_ratio
+    content_rows = np.where(row_sums > row_threshold)[0]
+    
+    if len(content_cols) == 0 or len(content_rows) == 0:
+        return gray_img  # no content detected, return as is
+    
+    left = max(0, content_cols[0] - padding)
+    right = min(w, content_cols[-1] + padding)
+    top = max(0, content_rows[0] - padding)
+    bottom = min(h, content_rows[-1] + padding)
+    
+    print(f"Crop: ({left}, {top}) -> ({right}, {bottom})  [original: {w}x{h}]")
+    return gray_img[top:bottom, left:right]
+
 def detect_layout_lines(gray_img: np.ndarray):
     """
     Detect vertical split line and optionally a horizontal header line.
@@ -36,34 +70,31 @@ def detect_layout_lines(gray_img: np.ndarray):
         v_line_x: X coordinate of the vertical column separator.
         h_line_y: Y coordinate of the header separator, or None if no header detected.
     """
-    # Binarize the image for line detection
     _, binary = cv2.threshold(gray_img, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
     h, w = binary.shape
 
-    # Vertical line detection — search in the central area 40-60%
     v_start, v_end = int(w * 0.4), int(w * 0.6)
     v_hist = np.sum(binary[:, v_start:v_end], axis=0)
     v_line_x = np.argmax(v_hist) + v_start
 
-    # Horizontal line detection — search in the top area 400px
     h_search = min(400, h // 3)
 
     has_header = False
     h_line_y = None
+    has_subheader = False
+    h_line_y_subheader = None
 
-    # Check row by row to see if the text crosses the vertical line
-    # One row of the header has active pixels both to the left and to the right of v_line_x (around the vertical line)
-    margin = 30  # area around the vertical line where we check
+    margin = 30
     for row in range(h_search):
         left_zone = binary[row, v_line_x - margin : v_line_x]
         right_zone = binary[row, v_line_x : v_line_x + margin]
         
-        # If both zones has text -> the row crosses the vertical line -> it's a header
+        # if both zones has text -> the row crosses the vertical line -> it's a header
         if np.sum(left_zone) > 0 and np.sum(right_zone) > 0:
             has_header = True
 
     if has_header:
-        # Find where the header ends: the last row in the top area
+        # find where the header ends: the last row in the top area
         # where the text crosses the vertical line
         last_crossing_row = 0
         for row in range(h_search):
@@ -72,34 +103,57 @@ def detect_layout_lines(gray_img: np.ndarray):
             if np.sum(left_zone) > 0 and np.sum(right_zone) > 0:
                 last_crossing_row = row
         
-        h_line_y = last_crossing_row + 15  # a little offset below the last row of the header
+        h_line_y = last_crossing_row + 25  # a little offset below the last row of the header
         print(f"Header detected, ends at y={h_line_y}")
+    
+    # now we check for a subheader from h_line_y
+    margin = 30
+    sub_search_end = min(h_line_y + 400, h)
+    last_sub_crossing_row = None
+    for row in range(h_line_y + 20, sub_search_end):  # +20 to skip past the header line itself
+        left_zone = binary[row, v_line_x - margin : v_line_x]
+        right_zone = binary[row, v_line_x : v_line_x + margin]
+        if np.sum(left_zone) > 0 and np.sum(right_zone) > 0:
+            has_subheader = True
+            last_sub_crossing_row = row
+
+    if has_subheader:
+        h_line_y_subheader = last_sub_crossing_row + 20
+        print(f"Subheader detected, ends at y={h_line_y_subheader}")
     else:
-        print("No header detected.")
+        print("No subheader detected.")
 
-    return v_line_x, h_line_y
+    return v_line_x, h_line_y, h_line_y_subheader
 
 
-def split_page_by_lines(image: np.ndarray, v_line_x: int, h_line_y: int = None):
+def split_page_by_lines(image: np.ndarray, v_line_x: int, h_line_y: int = None, h_line_y_subheader: int = None):
     """
     Split page into parts based on detected layout lines.
     
     Returns:
-        If h_line_y is None (no header): tuple of (left, right)
-        If h_line_y is set (has header):  tuple of (header, left, right)
+        If no header:                          tuple of (left, right)
+        If header only:                        tuple of (header, left, right)
+        If header + subheader:                 tuple of (header, subheader, left, right)
     """
     offset = 5
     
-    # Where the columns start (from top or from below header)
-    col_start_y = (h_line_y + offset) if h_line_y is not None else 0
-
-    left_half = image[col_start_y:, 0 : v_line_x - offset]
-    right_half = image[col_start_y:, v_line_x + offset :]
-
-    if h_line_y is not None:
+    if h_line_y is not None and h_line_y_subheader is not None:
+        # 4 parts: header, subheader, left, right
         header = image[0 : h_line_y, :]
+        subheader = image[h_line_y + offset : h_line_y_subheader, :]
+        left_half = image[h_line_y_subheader + offset :, 0 : v_line_x - offset]
+        right_half = image[h_line_y_subheader + offset :, v_line_x + offset :]
+        return header, subheader, left_half, right_half
+    elif h_line_y is not None:
+        # 3 parts: header, left, right
+        header = image[0 : h_line_y, :]
+        left_half = image[h_line_y + offset :, 0 : v_line_x - offset]
+        right_half = image[h_line_y + offset :, v_line_x + offset :]
         return header, left_half, right_half
     else:
+        # 2 parts: left, right
+        left_half = image[0 :, 0 : v_line_x - offset]
+        right_half = image[0 :, v_line_x + offset :]
         return left_half, right_half
 
 def denoise(image: np.ndarray, strength: int = 10) -> np.ndarray:
@@ -130,7 +184,7 @@ def remove_noise_by_area(binary_image, min_area = 10):
     for i in range(1, nlabels):
         area = stats[i, cv2.CC_STAT_AREA]
 
-        # If the object is big enough, it's probably a letter or a part of it
+        # if the object is big enough, it's probably a letter or a part of it
         if area >= min_area:
             cleaned_inverted[labels == i] = 255
 
@@ -139,25 +193,10 @@ def remove_noise_by_area(binary_image, min_area = 10):
     
     return cv2.bitwise_not(cleaned_inverted)
 
-def enhance_contrast(image: np.ndarray, clip_limit: float = 2.0,
-                     tile_size: tuple = (8, 8)) -> np.ndarray:
-    """
-    Enhance contrast using CLAHE (Contrast Limited Adaptive Histogram Equalization).
-    Works well for unevenly lit scanned documents.
-
-    Args:
-        image:      Grayscale image.
-        clip_limit: Threshold for contrast limiting.
-        tile_size:  Size of the grid for local histogram equalization.
-    """
-    clahe = cv2.createCLAHE(clipLimit=clip_limit, tileGridSize=tile_size)
-    return clahe.apply(image)
-
 
 def binarize(image: np.ndarray, block_size: int = 31, c: int = 10) -> np.ndarray:
     """
     Convert to black & white using adaptive thresholding.
-    Better than global thresholding for scanned documents with uneven lighting.
 
     Args:
         image:      Grayscale image.
@@ -241,15 +280,21 @@ def prepare_batch(pil_images: list[Image.Image],
     for i, pil_img in enumerate(pil_images):
         # Convert PIL to OpenCV and grayscale
         cv2_img = pil_to_cv2(pil_img)
+        inspect_step(f"page_{i+1}_0_original", cv2_img)
         gray = to_grayscale(cv2_img)
+        inspect_step(f"page_{i+1}_0_gray", gray)
         
-        # Deskew
+        # Crop to content area (remove extra margins / different paper texture)
+        gray = crop_to_content(gray)
+        inspect_step(f"page_{i+1}_0_cropped", gray)
+        
+        # # Deskew
         gray = deskew(gray)
         inspect_step(f"page_{i+1}_1_deskewed", gray)
         
         if split:
             # Detect layout lines
-            v_x, h_y = detect_layout_lines(gray)
+            v_x, h_y, h_y_sub = detect_layout_lines(gray)
             
             # Debug: draw detected lines
             debug_viz = cv2.cvtColor(gray, cv2.COLOR_GRAY2BGR)
@@ -258,12 +303,18 @@ def prepare_batch(pil_images: list[Image.Image],
             # Horizontal line (red) - only if header detected
             if h_y is not None:
                 cv2.line(debug_viz, (0, h_y), (debug_viz.shape[1], h_y), (0, 0, 255), 3)
+            if h_y_sub is not None:
+                cv2.line(debug_viz, (0, h_y_sub), (debug_viz.shape[1], h_y_sub), (255, 0, 0), 3)
             inspect_step(f"page_{i+1}_2_layout_lines", debug_viz)
             
             # Split page
-            parts_data = split_page_by_lines(gray, v_x, h_y)
+            parts_data = split_page_by_lines(gray, v_x, h_y, h_y_sub)
             
-            if h_y is not None:
+            if h_y is not None and h_y_sub is not None:
+                # 4 parts: header, subheader, left, right
+                header, subheader, left, right = parts_data
+                halves = [("header", header), ("subheader", subheader), ("left", left), ("right", right)]
+            elif h_y is not None:
                 # 3 parts: header, left, right
                 header, left, right = parts_data
                 halves = [("header", header), ("left", left), ("right", right)]
@@ -271,15 +322,29 @@ def prepare_batch(pil_images: list[Image.Image],
                 # 2 parts: left, right
                 left, right = parts_data
                 halves = [("left", left), ("right", right)]
+            
+            # Debug: inspect each split part
+            for label, part in halves:
+                inspect_step(f"page_{i+1}_3_split_{label}", part)
         else:
             halves = [("full", gray)]
 
         for label, half_data in halves:
-            # Final preprocessing for OCR (Denoise -> Contrast -> Binarize)
-            processed = denoise(half_data)
-            processed = enhance_contrast(processed)
-            binary = binarize(processed)
-            clean_binary = remove_noise_by_area(binary, min_area = 35)
+            # Deskew
+            half_data = deskew(half_data)
+            inspect_step(f"page_{i+1}_4_{label}_deskewed", half_data)
+            
+            # Denoise
+            denoised = denoise(half_data)
+            inspect_step(f"page_{i+1}_5_{label}_denoised", denoised)
+            
+            # Binarize
+            binary = binarize(denoised)
+            inspect_step(f"page_{i+1}_6_{label}_binarized", binary)
+            
+            # Remove small noise
+            clean_binary = remove_noise_by_area(binary, min_area = 20)
+            inspect_step(f"page_{i+1}_7_{label}_clean", clean_binary)
             
             final_pil = cv2_to_pil(clean_binary)
             

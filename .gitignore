@@ -5,3 +5,6 @@ Poza.pdf
 Image_Preprocessing_for_Improving_OCR_Accuracy.pdf
 preprocessed_images
 pictures.pdf
+extracted_images
+extracted_pages
+*.png

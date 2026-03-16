@@ -1,7 +1,3 @@
-"""
-OCR Comparison Script — runs all 3 OCR engines on preprocessed images
-and compares results using CER, WER, Levenshtein, and Jaro-Winkler metrics.
-"""
 import os
 import re
 import glob
@@ -11,7 +7,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from PIL import Image
 
-# ── OCR Engines ──────────────────────────────────────────────
+# OCR Engines
 import pytesseract
 import easyocr
 from surya.recognition import RecognitionPredictor
@@ -19,16 +15,12 @@ from surya.detection import DetectionPredictor
 from surya.foundation import FoundationPredictor
 from surya.common.surya.schema import TaskNames
 
-# ── Metrics ──────────────────────────────────────────────────
+#Metrics
 import Levenshtein
 import jellyfish
 from jiwer import cer, wer
 
-
-# ═══════════════════════════════════════════════════════════════
-# 1. OCR FUNCTIONS
-# ═══════════════════════════════════════════════════════════════
-
+# OCR FUNCTIONS
 def run_tesseract(image: Image.Image, lang: str = "ron") -> str:
     """Run Tesseract OCR on a PIL image."""
     return pytesseract.image_to_string(image, lang=lang).strip()
@@ -52,10 +44,7 @@ def run_surya(rec_predictor: RecognitionPredictor, det_predictor: DetectionPredi
     return "\n".join(lines).strip()
 
 
-# ═══════════════════════════════════════════════════════════════
-# 2. METRICS
-# ═══════════════════════════════════════════════════════════════
-
+# METRICS
 def normalize_text(text: str) -> str:
     """
     Normalize text for fair comparison:
@@ -100,10 +89,7 @@ def compute_metrics(reference: str, hypothesis: str) -> dict:
     }
 
 
-# ═══════════════════════════════════════════════════════════════
-# 3. COMPARISON PIPELINE
-# ═══════════════════════════════════════════════════════════════
-
+# COMPARISON PIPELINE
 def run_comparison(input_dir: str, output_dir: str,
                    ground_truth_dir: str = None) -> pd.DataFrame:
     """
@@ -125,24 +111,21 @@ def run_comparison(input_dir: str, output_dir: str,
         print(f"No PNG images found in {input_dir}")
         return pd.DataFrame()
 
-    # ── Initialize models ──
-    print("=" * 60)
-    print("Initializing OCR models...")
-    print("=" * 60)
+    # Initialize models
 
-    print("[1/3] EasyOCR...")
+    print("[1/3] EasyOCR")
     easy_reader = easyocr.Reader(["ro", "en"], gpu=True)
 
-    print("[2/3] Tesseract... (already available)")
+    print("[2/3] Tesseract")
 
-    print("[3/3] Surya...")
+    print("[3/3] Surya")
     foundation_predictor = FoundationPredictor()
     surya_det = DetectionPredictor()
     surya_rec = RecognitionPredictor(foundation_predictor)
 
     print("All models loaded.\n")
 
-    # ── Process each image ──
+    # Process each image
     rows = []
 
     for img_path in image_files:
@@ -234,9 +217,7 @@ def run_comparison(input_dir: str, output_dir: str,
     return df
 
 
-# ═══════════════════════════════════════════════════════════════
-# 4. SUMMARY & VISUALIZATION
-# ═══════════════════════════════════════════════════════════════
+# Plots
 
 def print_summary(df: pd.DataFrame, page_df: pd.DataFrame = None):
     """Print a summary table of overall (aggregate) metrics using per-page data."""
@@ -281,9 +262,7 @@ def print_summary(df: pd.DataFrame, page_df: pd.DataFrame = None):
                 print(f"  {engine:12s}: {src[col].mean():.4f}")
 
 
-# ═══════════════════════════════════════════════════════════════
-# 4b. PER-PAGE METRICS
-# ═══════════════════════════════════════════════════════════════
+# per page metrics
 
 def _extract_page_number(filename: str) -> int | None:
     """Extract page number from filenames like 'page_2_left.png'."""
@@ -423,7 +402,7 @@ def plot_per_page_results(page_df: pd.DataFrame, output_dir: str):
     per_page_dir = os.path.join(output_dir, "per_page_charts")
     os.makedirs(per_page_dir, exist_ok=True)
 
-    # ── Individual page charts ──
+    #Individual page charts
     for _, row in page_df.iterrows():
         page = int(row["Page"])
 
@@ -454,7 +433,7 @@ def plot_per_page_results(page_df: pd.DataFrame, output_dir: str):
             plt.savefig(os.path.join(per_page_dir, fname), dpi=150)
             plt.close()
 
-    # ── Grouped bar chart across all pages (CER & WER) ──
+    # Grouped bar chart across all pages (CER & WER)
     import numpy as np
     x = np.arange(n_pages)
     width = 0.25
@@ -507,12 +486,12 @@ def plot_results(df: pd.DataFrame, page_df: pd.DataFrame, output_dir: str):
         plt.close()
         print(f"Plot saved: {output_dir}/time_comparison.png")
 
-    # Use per-page data for accuracy metrics (avoids inflated values from short fragments)
+    # Use per-page data for accuracy metrics
     src = page_df if page_df is not None and not page_df.empty else df
     engines_list = ["Tesseract", "EasyOCR", "Surya"]
     colors = ["#2196F3", "#4CAF50", "#FF9800"]
 
-    # ── CER comparison ──
+    # CER comparison
     cer_cols = [f"{e} CER" for e in engines_list if f"{e} CER" in src.columns]
     if cer_cols:
         engines = [c.replace(" CER", "") for c in cer_cols]
@@ -530,7 +509,7 @@ def plot_results(df: pd.DataFrame, page_df: pd.DataFrame, output_dir: str):
         plt.close()
         print(f"Plot saved: {output_dir}/cer_comparison.png")
 
-    # ── WER comparison ──
+    # WER comparison
     wer_cols = [f"{e} WER" for e in engines_list if f"{e} WER" in src.columns]
     if wer_cols:
         engines = [c.replace(" WER", "") for c in wer_cols]
@@ -549,9 +528,7 @@ def plot_results(df: pd.DataFrame, page_df: pd.DataFrame, output_dir: str):
         print(f"Plot saved: {output_dir}/wer_comparison.png")
 
 
-# ═══════════════════════════════════════════════════════════════
 # 5. COMBINE TEXT FILES
-# ═══════════════════════════════════════════════════════════════
 
 def combine_texts(output_dir: str):
     """
@@ -608,21 +585,16 @@ def combine_texts(output_dir: str):
         print(f"Combined text saved: {combined_path}")
 
 
-# ═══════════════════════════════════════════════════════════════
-# 6. MAIN
-# ═══════════════════════════════════════════════════════════════
+# main
 
 if __name__ == "__main__":
     input_folder = "../preprocessed_images"
     output_folder = "../output/comparison"
 
-    # Optional: path to ground truth .txt files
-    # Each file should be named like the image (e.g., page_1_left.txt)
-    ground_truth = "../ground_truth"  # Set to a folder path if you have ground truth
+    ground_truth = "../ground_truth"
 
     df = run_comparison(input_folder, output_folder, ground_truth_dir=ground_truth)
     
-    # Combine individual text files into one per engine
     combine_texts(output_folder)
     
     print(f"\nComparison complete. {len(df)} images processed.")

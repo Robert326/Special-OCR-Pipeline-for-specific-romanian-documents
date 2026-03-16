@@ -3,772 +3,561 @@
 ================================================================================
 
 --------------------------------------------------------------------------------
-IMAGINE: image.png
+IMAGINE: pictures_page_1.png
 --------------------------------------------------------------------------------
 
 METRICI:
-   CER: N/A
-   WER: N/A
+   CER: 1.884393063583815
+   WER: 3.8947368421052633
 
 GROUND TRUTH:
 ----------------------------------------
-(lipseste)
+MINISTERUL COMERȚULUI EXTERIOR ȘI COOPERĂRII ECONOMICE INTERNAȚIONALE INSTITUTUL
+ CENTRAL DE CERCETĂRI ECONOMICE INSTITUTUL DE ECONOMIE MONDIALĂ conjuctura econo
+miei mondiale
 
 OUTPUT TESSERACT:
 ----------------------------------------
-Anu 1976 — primul an din actualul, plan
-al. afirmării revoluţiei tehnico-
+p,
 
-cinci
-nal,
-ce — a marcat o prezenţă activă a [ării
+ste Aaa /
+ANEI e ee" că
+15 Dina ff
++ => Pa
+= => 4
+5
++ o t> Pc
+ui
+să
+pia ÎI m
+ană
+ani i = =:
+ste ari Aire
+— =
+tai
+îi cau Nk
+Î SR a i
+a e e € E antenă
+Și gi
+N
 
-economică internaţională, atit
-ren
-ării mai profunde în cir-
-mondial, cât și prin ampliji-
-concrete consacrate . so
-luţio-
+3 [3
+EEE d
+ă Li
+; cr.
+a ui =
+pac za
+i a] lada
+i «Tr i Gă |
+Ea] =
+=, Ba)
+3 = i
+Sl
 
-ştiinţă].
-noastre în viața
-sub. aspectul. ani
-cuitul,, economic
-carea. a
-cţiunilor
-mării marilor. probleme
-jruntă lumea contemporană.
+za 2 >
+ep,
+: Ș e fra |
+E
+PE RE ape setea red >
+7, e endl
+4, i V)
+ș ZE 7 QR ps
+=
 
-Intensificarea par
-ticipării României socialiste
-la diviziunea mondială a muncii și, în acest
-cadru
-, dezvoltarea continuă a schimburilor. și
+=,
+“>
+DIE |
+=>
+[o d
+Leii
+=
+27)
+——
+prd
 
-economice care con-
-
-u
-
-cooperării ec
-onomice cu țările socialiste, c
-țările în curs de dezvoltare, cu toate ţările lu
-mii,
-fără deosebire de sistemul politico-social, pe
+"MI
 
 
 --------------------------------------------------------------------------------
-IMAGINE: page_2_header.png
+IMAGINE: pictures_page_2.png
 --------------------------------------------------------------------------------
 
 METRICI:
-   CER: N/A
-   WER: N/A
+   CER: 0.6021021021021021
+   WER: 0.782608695652174
 
 GROUND TRUTH:
 ----------------------------------------
-(lipseste)
+PARTICIPAREA ACTIVĂ A ROMÂNIEI LA VIAȚA ECONOMICĂ INTERNAȚIONALĂ Ion PĂȚAN minis
+trul comerțului exterior și cooperării economice internaționale viceprim-ministr
+u al guvernului Anul 1976 - primul an din actualul plan cincinal, al afirmarii r
+evoluției technico-științifice - a marcat o prezență activă a țării noastre în v
+iața economică internațională, atît sub aspectul angrenării mai profunde în cir-
+cuitul economic mondial, cît și prin amplifi-carea acțiunilor concrete consacrat
+e soluționării marilor probleme economice care confruntă lumea contemporană. Int
+ensificarea participării României socialiste la diviziunea mondială a muncii și,
+ în acest cadru, dezvoltarea continuă a schimburilor și cooperării economice cu 
+țările socialiste, cu țările în curs de dezvoltare, cu toate țările lumii fără d
+eosebire de sistemul politico-social, pe baza principiilor progresiste ale relaț
+iilor dintre state, precum și activitatea internațională des-fășurată pe multipl
+e planuri în vederea înfăp-tuirii unei noi ordini economice mondiale dau expresi
+e traducerii consecvente în viață a mă-rețelor obiective adoptate de Congresul a
+l XI-lea al Partidului Comunist Român. Așa cum sublinia tovarășul Nicolae Ceaușe
+scu în Raportul prezentat la Congresul al XI-lea al P.C.R., "România va particip
+a și în viitor, în mod activ, la diviziunea internațională a muncii, la schimbul
+ de valori materiale și spirituale cu toate statele, fără deo-sebire de orînduir
+ea socială. Considerăm că aceasta constituie o necesitate obiectivă pentru progr
+esul economico-social al fiecărei țări - deci și României - precum și pentru rea
+li-zarea unei noi ordini economice internaționale, pentru cauza colaborării și p
+ăcii în lume".Transpunerea în fapt a orientărilor stabilite, contribuția mereu s
+porită a schimburilor comer-ciale și cooperării externe la dezvoltarea multi-lat
+erală și în ritm susținut a economiei, apre-cierea largă și prestigiul tot mai m
+are de care România se bucură în lume ca partener eco-nomic și ca factor proemin
+ent în lupta pentru progres, prosperitate și pace pe plan interna-țional au conf
+irmat pe deplin justețea și rea-lismul politicii interne și externe a partidului
+ și statului nostru, fundamentată în document-ele programatice ale Congresului a
+l XI-lea al P.C.R.  În procesul de amplificare a participării României la viața 
+economică internațională un rol esențial îl are activitatea multilaterală, inter
+-nă și internațională, desfășurată de secretarul ge-neral al partidului președin
+tele republicii, tovarășul Nicolae Ceaușescu. Exigențele impri-mate de conducăto
+rul partidului și statului pen-tru ridicarea continuă, cantitativă și calitativă
+ a producției, îndrumarea și conducerea concretă, zi de zi, a activității în mod
+ hotărîtor, la creșterea aportului sectorului extern al economiei în dez-voltare
+a generală a patriei. Acordurile economice și convențiile de cooperare încheiate
+ cu un număr mare de state - rezultat direct al con-vorbirilor și înțelegerilor 
+la nivel înalt - au impulsionat puternic extinderea relațiilor eco-nomice extern
+e ale țării noastre. De cea mai mare însemnătate este contribuția prestigioasă, 
+teoretică și practică, a tovarășului Nicolae Ceaușescu la afirmarea în viață a p
+rincipiilor noi ale relațiilor între state, a unei noi ordini economice și polit
+ice internaționale, obiective cărora secretarul general al partidului le dedică 
+o activitate intensă, neobosită, amplu remarcată și apreciată în lume.  Acționîn
+d consecvent pentru extinderea schimnburilor sale economice externe, România dev
+ine un participant tot mai activ la circuitul economic mondial. Volumul total al
+ comerțului exterior românesc a crescut continuu, fiind în 1975 de peste 19 ori 
+mai ridicat decît cel din 1950 și de 6,5 ori mai mare decît cel din 1960. Semnif
+icativ pentru angrenarea țării în circui-tul economic mondial este faptul că, în
+ ultimii ani, schimburile economice externe s-au dezvol-tat într-un ritm mai îna
+lt decît cel înregistrat de alți indicatori sintetici, ceea ce se înscrie în
 
 OUTPUT TESSERACT:
 ----------------------------------------
-OTV VP PIPI Pr pp Y Li
+PARTICIPAREA ACTIVĂ A ROMANIEI
+LA VIAŢA ECONOMICĂ INTERNA ȚIONALĂ
 
-u] |
+lon PĂŢAN
 
-- PARTICIPAREA ACIIVĂ “A ROMÂNIEI
-LA VIATA: PCONOM
-ICĂ INTERNAȚIONALĂ
+mi
+nistrul comerţului exterior
+și cooperării economice internaţionale
+viceprim-mini
+stru al guvernului
 
+Anu 1976 — primul an din actualul plan
+cineinal, al afirmări
+i revoluţiei tehnico-
+științijice — a marcat O prezenţă activă a țării
+noastre î
+n viața economică internaţională, atit
+sub. aspectul angrenării. mai profunde în
+. cir-
+cuitul economie mondial, cât și prin ampliji-
+carea acţiunilor concrete c
+onsacrate soluţio-
+nării marilor probleme economice care con-
+fruntă lumea conte
+mporană.
 
---------------------------------------------------------------------------------
-IMAGINE: page_2_left.png
---------------------------------------------------------------------------------
+Intensificarea participării României socialiste
+la diviziunea mondială
+ a muncii și, în acest
+cadru, dezvoltarea continuă a schimburilor. și
+cooperării
+ economice cu țările socialiste, cu
+țările în curs de dezvoltare, cu toate ţăril
+e lumii,
 
-METRICI:
-   CER: N/A
-   WER: N/A
+deosebire de sistemul politico-social, pe
 
-GROUND TRUTH:
-----------------------------------------
-(lipseste)
+i cipiilor. rogresiste ale 
+relaţiilor dintre
 
-OUTPUT TESSERACT:
-----------------------------------------
-; lon
+lismul politicii interne şi externe a partidului
+şi statului 
+nostru, fundamentată în documen-
+tele programatice ale Congresului al XI-lea al
 
-ministrul con
-, şi cooperării econ
-„ viceprim-minis
-Li
-LS ” 4 A
-MI)
-
-A ru
-l 1976 — primul an din acthialul plan
-cîncinal, al afirmării, revoluției telnico
--
-ştiinţifice — a marcat. o prezenţă activă a fării |
-' noastre în viața, econom
-ică internaţională, atît
-sub, aspectul angrenării! mai profunde în cir-
-cuitul,,
- economic mondial, cât şi prin ampliji-
-carea acţiunilor concrete consacrate, so
-luțio-
-nării marilor probleme economice .care con-
-jruntă lumea contemporană, - 
-SI
-:.Intensificarea participării României socialiste
-la diviziunea mondială a mu
-ncii şi, în acest
-cadru, dezvoltarea continuă a schimburilor şi
-cooperării econo
-mice cu ţările: socialiste, cu
-țările în curs de dezvoltare, cu toate ţările lum
-ii,
-fără deosebire de sistemul politico-social, pe
-baza principiilor progresiste
- ale relaţiilor dintre
-state, precum şi activitatea internaţională des-
-Jăşurată
- pe multiple planuri în vederea înfăp-
-tutrii unei noi ordini economice mondiale
- dau
-expresie traducerii consecvente în viață a mă-
-rețelor obiective adoptate d
-e Congresul
-al XI-lea al Partidului Comunist Român.
-Așa cum sublinia tovarășul N
-icolae Ceauşescu
-în Raportul prezentat la Congresul al XI-lea
-| . P.C.R, „Români
-a va participa și în viitor,
-n mod activ, la diviziunea internațională
-4 muncii,
- la schimbul de valori materiale
-ȘI _Sbirituale cu toate statele, fără deo-
-N ei
- e or mduirea socială, Considerăm că
-progreate nstituie „0 necesitate obiectivă 
-pentru
-deci şi al României al îiecărei țări a
-zarea unei noi orâini economie , p
-entru reali-
-pentru cauza colata e „nomice internaţionale,
-Transpunerea în f i i
- PAC în lume ”
-contribuția mereu A ză caror srabilite,
-ciale și coopetării ori ă
- a schimburilor comer-
-laterală și în ritm susţin ; „ezooltarea muti
-, 3 nuț a e
-conomiei, apre-
-
-AN
-
-NOomic si
-
-vrogne 5 ca Jactor proeminent în lupta pentru
-
-f
-i *, Prosperitate și pace pe plan interna
-confirmat pe deplin justețea și rea-
-
-
---------------------------------------------------------------------------------
-IMAGINE: page_2_right.png
---------------------------------------------------------------------------------
-
-METRICI:
-   CER: N/A
-   WER: N/A
-
-GROUND TRUTH:
-----------------------------------------
-(lipseste)
-
-OUTPUT TESSERACT:
-----------------------------------------
-, !
-
-PĂŢAN
-erțului exterior |
-mice internaţionale
-
-ru al guvernului
-
-! b
-
-„i 4. 
-” S .
-lismul «politicii înterne și externe a partidului
-și statului nostru, find
-amențată în, documen-
-tele programatice ale Congresului al Xi-lea al
-
-P.C.R, i i
- d
-
-În procesul de. amplificare a participării
-+ României: la viaţa economică în
-ternaţională un
+Po ONIA
+În procesul de amplificare. a participării
+României la viața economică i
+nternaţională un
 rol esenţial îl are activitatea multilaterală, inter-
-nă și inte
-rnaţională, desfășurață de secretarul ge-
-neral! al' partidului, preşedintele re
-publicii,
+nă și int
+ernaţională, desfășurată de secretarul ge-
+neral al partidului, preşedintele rep
+ublicii,
 tovarășul Nicolae Ceaușescu. Exigenţele impri-
-mate de conducătorul pa
-rtidului şi statului pen-
-tru ridicarea continuă, cantitativă „şi calitativă
-a p
-roducției, îndrumarea şi conducerea concretă,
-zi de zi, a activităţii în sectoru
-l de comerţ exte-
+mate de conducătorul par
+tidului şi statului pen-
+tru ridicarea continuă, cantitativă și calitativă
+a pro
+ducției, îndrumarea şi conducerea concretă,
+zi de zi, a activităţii în sectorul 
+de comerţ,  exte-
 rior au contribuit, în mod hotăritor, la creşterea
 aportului s
-ectorului extern'al economiei în dez-
+ectorului extern al economiei în dez-
 voltarea generală a patriei. Acordurile ec
 onomice
-și convențiile de cooperare încheiate cu un
-număr mare de state — rezult
-at direct al con-
-vorbirilor și înțelegerilor la nivel înalt — au
-impulsionat pu
-ternic extinderea relaţiilor eco-
-nomice externe ale ţării noastre. De cea mai
-m
-are însemnătate este contribuţia prestigioasă,
-teoretică și practică, a tovarăşu
-lui Nicolae
-Ceaușescu la afirmarea în viață a principiilor
-noi ale relațiilor în
-tre state, a unei noi ordini
-economice şi politice internaționale, obiective
-căr
-ora secretarul general al partidului le dedică
-o activitate intensă, neobosită, 
-amplu remarcată
-și apreciată în lume.
-
-Acţionînd consecvent Pentru extinderea
-sc
-himburilor sale economice externe, România
-devine un participant tot mai activ l
-a circuitul
-economic mondial. Volumul total al comerțului
-exterior românesc a cr
-escut continuu, fiind în
-1975 de peste 19 ori mai ridicat decît cel din
-
-1950 şi
- de 6,5 ori mai mare decit cel din 1960.
-Semnificativ pentru angrenarea țării în
- circui-
-tul economic mondial este faptul că, în ultimii
-ani, schimburile econom
-ice externe s-au dezual-
-lat într-un ritm mai înalt decit cel înregistrat
-de alț
-i indicatori sintetici, ceea ce se înseria ta
+iile de cooperare încheiate cu un
+ate — rezultat direct al con-
 
 
 --------------------------------------------------------------------------------
-IMAGINE: page_3_header.png
+IMAGINE: pictures_page_3.png
 --------------------------------------------------------------------------------
 
 METRICI:
-   CER: N/A
-   WER: N/A
+   CER: 0.529038854805726
+   WER: 0.6556927297668038
 
 GROUND TRUTH:
 ----------------------------------------
-(lipseste)
+tendințele calitative de pe arena economică in-ternațională. Astfel, în perioada
+ 1971-1975, rit-mul mediu anual de creștere al comerțului exte-rior al țării noa
+stre a fost de 18,3 la suta, mai rapid în comparație atît cu ritmul de creștere 
+al produsului social (10,6 la sută pe an), venitu-lui național (11,3 la sută pe 
+an), cît și cu cel al producției industriale (13 la suta pe an). Creșterea accel
+erată a relațiilor economice externe ale României a condus la sporirea ponderii 
+activității de comerț exterior și cooperare cu alte țări la circa o pătrime în v
+olumul total al producției. Pe această bază, se poate spune că fiecare al patrul
+ea muncitor din producție este antrenat în activități care privesc exportul, imp
+ortul sau cooperarea economică. Totodată, ca urmare a unei asemenea dezvoltări a
+ schim-burilor economice cu alte state, țara noastră și-a majorat ponderea în an
+samblul comerțului mon-dial de la 0,37 la sută în 1950 la 0,60 la sută în 1975. 
+Succesele remarcabile obținute de poporul român în toate sectoarele economiei na
+ționale în primul an al cincinaulului 1976-1980 , precum și măsurile luate pentr
+u perfecționarea meca-nismului și sistemului de lucru în activitatea de comerț e
+xterior și de cooperare internațională au creat condiții favorabile pentru o nou
+ă dez-voltare a relațiilor economice externe ale țării noastre, pentru îmbunătăț
+irea pe mai departe a structurii schimburilor comerciale și a lărgirii ariei lor
+ geografice. În anul 1976 volumul comerțului exterior a crescut cu 14,5 la sută 
+față de realizările anu-lui 1975, din care exportul cu 14,9 la sută, iar importu
+l cu 14,1 la sută, balanța comercială externă fiind activă. Este, de asemenea, d
+e remarcat faptul că sporirea volumului comerțu-lui exterior și cooperării econo
+mice al țării noastre s-a realizat printr-o diversificare mai largă a piețelor, 
+România întreținând actial-mente relații economice cu 140 de țări ale lumii, de 
+peste patru ori mai mult decît în primii ani postbelici. Așa cum se cunoaște, în
+ ultimii ani activi-tatea noastră de comerț exterior și de cooperare s-a desfășu
+rat în condițiile unor sensibile dere-glari pe piețele internaționale de mărfuri
+ și financiare, ale existenței unei adînci crize, apre-ciată drept cea mai puter
+nică din anii postbelici în cadrul economiei țărilor capitaliste. Con-junctura m
+ondială în 1976, deși a marcat o anumită revenire față de anii trecuți, a resimț
+it consecințele acestei crize, indicatorii economici evidețiind o slăbire a tend
+ințelor de relansare economică în semestrul al doilea al anului, com-parativ cu 
+primul semestru, ceea ce s-a reflec-tat și asupra comerțului internațional. Cu t
+oate acestea, relațiile economice externe ale țării noastre, întreaga economie n
+ațională au con-tinuat să se dezvolte în ritmuri înalte, punînd puternic în evid
+ență superioritatea orînduirii noastre socialiste. În cadrul problematicii dezvo
+ltării comerțu-lui exterior, un loc central a revenit, în con-tinuare, preocupăr
+ilor pentru creșterea ponderii în exportul românesc a produselor ce înglo-beaza 
+o cantitate cît mai mare de muncă com-plexă, de tehnicitate și cercetare, pentru
+ a asi-gura valorificarea superioară a resurselor materiale și de muncă, a poten
+țialului indus-trial și tehnologic al țării. Produsele care răs-pund dezideratel
+or de eficiență economică spo-rită - mașini și utilake, produse chimice și bunur
+i industriale de larg consum - au deținut în 1976 peste 50 la sută din totalul e
+xportului. În cadrul fiecărei ramuri s-au depus eforturi pentru promovarea expor
+tului produselor care încorporează un aport cît mai mare de creație proprie, pen
+tru alinierea parametrilor tehnici și de calitate la cerințele piețelor externe.
+ Printre produsele noi introduse la export în cursul anului 1976 se numără autot
+urismele de teren ARO 241,242 și 244, autobuzele ROMAN 109 RD și 112 UD, locomot
+ivele Diesel electrice de 3 500 CP, tractorul multifuncțional TIH-445 și tractor
+ul pe șenile S-1 800 IF, noi tipuri de strunguri automate și freze, centrale tel
+efonice rurale, televizoarele cu circuite integrate, mași-nile de facturat FC 16
+ și 64, calculatoarele de birou Felix CE 211 și 212 T, cauciucul poliizo-prenic,
+ numeroase modele noi de mobilă, con-fecții, textile etc. Nivelul atins de comer
+țul nostru exterior ne obligă la intensificarea eforturilor în direcția lărgirii
+ și îmbunătățirii eficienței participării la circuitul economic mondial. Mai ave
+m încă mult de înfăptuit în acest sens, luînd în con-siderare chiar și numai fap
+tul că, în timp ce România realizeaza circa 1,50 la sută din pro-ducția industri
+ală mondială, ponderea ei în comerțul mondial este mai mică. În ceea ce pri-veșt
+e structura schimburilor, exportul în țările capitaliste dezvoltate este compus 
+încă în mare măsură din mărfuri de bază și semifabricate, datorită, în mare part
+e, și restricțiilor mai vechi și noi impuse de aceste țări la importul de pro-du
+se finite.
 
 OUTPUT TESSERACT:
 ----------------------------------------
-Lat)
+Conjunctura economiei mondiale
 
-i Și ț Pa i
+tendinţele calitative de pe arena economică în-
 
-* cinlunctura economia mândiale
+ternațională, Astfel, în perioada 1971—1975, rit-
+mul mediu anual de creştere al
+ comerțului exte-
+vior al ţării noastre a fost de 18,3 la sută, mai
+rapid în com
+paraţie atit cu ritmul de creștere
+al produsului social (10,6 la sută pe an), ve
+nitu-
+lui național (11,3 la sută pe an), cît şi cu cel al
+producţiei industriale
+ (13 la sută pe an).
 
-=)
+Creşterea accelerată a relaţiilor economice
+externe ale Ro
+mâniei a condus la sporirea pon-
+derii activităţii de comerţ exterior și coopera
+re
+cu alte țări la circa o pătrime în volumul totul
+al producţiei. Pe această ba
+ză, se poate spune
+că fiecare al patrulea muncitor din producţie
+este antrenat î
+n activităţi care privesc exportul,
+importul sau cooperarea economică. Totodată,
 
-,
-
-.
-
-v,
-Sid pu
-
-CI
-
-
---------------------------------------------------------------------------------
-IMAGINE: page_3_left.png
---------------------------------------------------------------------------------
-
-METRICI:
-   CER: N/A
-   WER: N/A
-
-GROUND TRUTH:
-----------------------------------------
-(lipseste)
-
-OUTPUT TESSERACT:
-----------------------------------------
-4 la fa . Li -
-tendinţele calitativ de, pă arena. economică în !
-ternaţională, A
-skţel, în perioadă 1971.2-1975, rit i
-mul mediu anual de creştere al comerțului 
-oxte-
-rior al țării noasire a, [ost de-18,3 la sută, mai
-rapid în comparație 'at
-ît, cu ritmul de creșiere
-al produsului social (10, 6 la sută pe an), Benitu-
-lu
-i național (11, 3 1a sută pe an), cit şi cu cel al
-producției industriale (13 la
- sută pe an).! |
-
-Creșterea ' accelerată a relaţiilor economice «|
-externe ale R
-omâniei a condus la sporirea DOn-
-
-derii activităţii de comerț, exterior şi. coo
-perare i
-
-cu alte țări la circa, o pătrime îm volumul total
-al producţiei. Pe. a
-ceastă "bază, se poate spune
-că fiecare: al'patrulea " mauncitor, din producție
-
-este antrenat în activități care privesc exportul,
-importul” sau cooperarea: eco
-tiomică. Totodată,
 ca urmare a unei asemenea dezvoltări a schim-
-dur ilor, econo
-mice cu alte state, ţara noastră şi-a +!
-majorat,ponderea în ansamblul comerțulu
-i MON-
-dial de la 0,37 la, sută în.1950 la.0,60 la sută.
-în, 1975.  ., A d
+burilor economice cu alte state, 
+ţara noastră și-a
+majorat ponderea în ansamblul comerțului mon-
+“dial de la 0,37
+ la sută în 1950 la 0,60 la sută
+în 1973.
 
-Succ
-esele remarcabile obținute de poporul
-români în toate sectoarele economiei națio
-nale
-în primul an al'cincinalului 1976—1980, precum
-și măsurile luate pentru per
-fecționarea meca-
-nismului şi sistemului de lucru.în activitatea de
-comerț exter
-ior și:de cooperare internaţională
-au creat condiții favorabile pentru o nouă de
-z-
-voltare a relațiilor econamice externe ale ţării
-noastre, pentru îmbunătăţire
-a pe mai departe a
-structurii schimburilor comerciale și lărgirii
-ariei lor geog
-rajice.
+Succesele remarcabile obținute de pop
+orul
+român în toate sectoarele economiei naţionale
+în primul an al cincinalului 
+1976-—1930, precum
+și măsurile luate pentru perfecționarea meca-
 
-În anul 1976 volumul comerţului exterior a
-crescut cu 14,5 la sută faţă
- de realizările anu-
-lui 1975, din care exportul cu 14,9 la sută, iar
-importul c
-u 14,1 la sută, balanța comercială
-externă fiind activă. Este, de asemenea, de
-r
-emarcat faptul că sporirea volumitlui comerţiu-
-lui exterior și cooperării econo
-mice al ţării
-noastre s-a realizat printr-o diversificare mai
-largă a piețelor, 
-România întreţinînd actual-
-mente relaţii economice cu 140 de ţări ale lumii,
-de
- peste patru ori mai mult decît în primii ani
-postbelici. ,
+_nismului i Si
+S LE VU de lucru iu seg) mă sa
 
-Așa cum se cunoaște
-, în ultimii ani activi-
-tatea noastră de comerț exterior şi de cooperare
-s-a de
-sfășurat în condițiile unor sensibile dere-
-glări pe piețele internaționale de m
-ărjuri şi
-financiare, ale existenţei unei adînci crize, apre-
-ciată drept cea ma
-i puternică din anii postbelici
-în cadrul economiei ţărilor capitaliste. Con-
-ju
-nctura mondială în 1976, deși a marcat o
-anumită revenire faţă de anii trecuţi, 
-a resimţit
-consecințele ucestei crize, indicatorii economici
+Se dai o slăbire a tendințelor de relansare
 
-)
+eco
+nomică în semestrul al doilea al anului, com-
+parătiv cu primul semestru, ceea c
+e s-a rejlec-
+tat și asupra comerțului internațional. Cu toate
+acestea, relaţiil
+e economice externe ale ţării
+noastre, întreaga economie naţională au con-
+tinua
+t să se dezvolte în ritmuri înalte, punind
+puternic în evidență superioritatea o
+rinduirii
+noastre socialiste.
 
+În cadrul problematicii dezvoltării comerțu-
+lui 
+exterior, un loc central a revenit, în con-
+tinuare, preocupărilor pentru creşte
+rea ponderii
+în exportul românesc a produselor ce înglo-
+bează o cantitate cît m
+ai mare de muncă com-
+plexză, de tehnicitate și cercetare, pentru a asi-
+gura va
+lorificarea superioară a resurselor
+materiale și de muncă, a potențialului indus
+-
+trial. și tehnologic al țării. Produsele care răs-
+pund dezideratelor de efici
+ență economică spo-
+rită — mașini și utilaje, produse chimice și
+bunuri industri
+ale de larg consum — au deţinut
+în 1976 peste 50 la sută din totalul exportului.
 
---------------------------------------------------------------------------------
-IMAGINE: page_3_right.png
---------------------------------------------------------------------------------
-
-METRICI:
-   CER: N/A
-   WER: N/A
-
-GROUND TRUTH:
-----------------------------------------
-(lipseste)
-
-OUTPUT TESSERACT:
-----------------------------------------
-!
-
-,  oviăențiină, o slăbire a, tendinţelor de relansare
- Săonomică în semestrul
-! al doilea al anului, com-
-' parativ cu primul semestru, ceea ce s-a reflee-
-ta
-t și asupra comerțulili internaţional. Cu toate
-acestea, relaţiile economice ext
-erne ale țării
-noasire, întreagu economie nuțională au con-
-tinuat, să se dezvol
-te în ritmuri înalte, punind
-puternic în evidenţă superioritatea orînduirii
-noas
-tre socialiste.
-În căărul problematicii dezvoltării comerțu-
-lui, exterior, un l
-oc central a revenit, în con-
-timiare, preocupărilor pentru creşterea ponderţi
-
-
-' îm exportul românese a produselor ce înglo-
-bează o cantitate cât mai mare de 
-muncă com- *
-
-pleză, de tehnicitată şi cercetare, pentru a asi-
-„gura valorifica
-rea superioară a resurselor
-"materiale şi 'de muncă: a potențialului indus-
-tria
-l: și tehnologic al ţării, Produsele care Tăs-
-pund dezideratelor de eficiență e
-conomică spo-
-rită — mașini şi utilaje, produse chimice și
-bunuri industriale de
- larg consum — au deţinut
-în' 1976 peste 50 la sută din.totalul exportului.
-"În 
-cadrul „fiecărei ramuri s-au depus. eforturi
-pentru promovarea exportului produs
-elor care
+În cadrul fiecărei ramuri s-au depus ejorturi
+pentru promovarea exportului prod
+uselor care
 încorporează un aport cît mai mare de creație
-proprie, pentru aliniere
-a parametrilor tehnici şi
-de calitate la cerinţele pieţelor externe.
+proprie, pentru alinie
+rea parametrilor tehnici și
+de calitate la cerințele piețelor externe.
 
-Printre pr
-odusele noi introduse la export în
-cursul anului 1976 se numără autoturismele de
-
-
-teren ARO 241, 242 şi 244, autobuzele ROMAN
-109 RD și 112 UD, locomotivele Die
-sel electrice
-
-de 3 500 CP, tractorul multifuncțional TIH-445
-și tractorul pe șe
-nile S-1 800 IF, noi tipuri de
-strunguri automate și freze, centrale telefonice
-
-rurale, televizoarele cu circuite integrate, mași-
-nile de facturat FC 16 şi 64,
- calculatoarele de
-birou Felix CE 211 și 212 T, cauciucul poliizo-
-prenic, numer
-oase modele noi de mobilă, con-
-fecţii, textile etc.
-
-Nivelul atins de comerțul 
-nostru exterior ne
-obligă la intensificarea eforturilor în direcția
-lărgirii şi 
-îmbunătăţirii eficienţei participării la
-circuitul economic mondial. Mai avem în
-că
-mult de înfăptuit în acest sens, luînd în con-
-siderare chiar şi numai faptul
- că, în timp ce
-România realizează circa 1,50 la sută din pro-
-ducția industrial
-ă mondială, ponderea ei în
-comerțul mondial este mai mică. În ceea ce pri-
-veşte
- structura schimburilor, exportul în ţările
-capitaliste dezvoltate este compus î
-ncă în mare
-măsură din mărfuri de bază şi semifabricate,
-datorită, în parte, și 
-restricțiilor mai vechi şi
-noi împuse de aceste ţări la importul de pra=
-duse fi
-nite.
+Printre 
+produsele noi loci e A DOL în
 
 
 --------------------------------------------------------------------------------
-IMAGINE: page_4_header.png
+IMAGINE: pictures_page_4.png
 --------------------------------------------------------------------------------
 
 METRICI:
-   CER: N/A
-   WER: N/A
+   CER: 0.5721763640024159
+   WER: 0.7114285714285714
 
 GROUND TRUTH:
 ----------------------------------------
-(lipseste)
+Sarcini deosebite stau în fața activității de comerț exterior și cooperare econo
+mică inter-națională în următorii ani ai actualului cincinal. Pentru pregătirea 
+din timp a tuturor condițiilor necesare îndeplinirii acestor sarcini acordăm per
+manent o atenție principală orientării sorti-mentale și ridicării calitative a p
+roducției desti-nate exportului. Concomitent, în vederea obți-nerii unei creșter
+i în 1977 mai mari de 15 la sută a volumului comerțului exterior față de realiză
+rile din 1976, precum și a unei dinamici de 190-201,4 la sută în perioada 1976-1
+980 cumulat față de realizările 1971-1975, desfășurăm o intensă activitate pentr
+u asigurarea din timp a portofoliului de comenzi, de contracte externe curente ș
+i de lungă durată la export și import, astfel încît să creăm o bază certă de des
+facere a producției destinate exportului, cît și pentru aprovizionarea de la ext
+ern cu pro-dusele necesare. Paralel cu formele clasice de comerț exterior, Român
+ia dezvoltă cooperarea economică inter-națională și tehnico-științifică cu alte 
+state, ca o modalitate superioară de valorificare a poten-țialului uman și mater
+ial, un mijloc de dimi-nuare și lichidare a decalajelor economice exis-tente pe 
+plan mondial, al apropierii între nați-uni, întăririi păcii și securității inter
+naționale. În ultimul deceniu, întreprinderile românești au derulat cu firme și 
+organizații economice străine peste 400 de acțiuni de cooperare în diferite ramu
+ri industriale. Activitatea de cooperare contribuie cu peste 20% la volumul tota
+l al schimburilor economice ale țării noastre. S-a extins practica așezării rela
+țiilor de cola-borare cu diferite țări ale lumii pe baza unor acorduri interstat
+ale de lungă durată sau a altor instrumente de cooperare industriala și tehnico-
+științifică. Au fost promovate forme moderne și eficiente de cooperare economică
+, în scopul folosirii mai largi a avantajelor participării la diviziunea interna
+țională a muncii: construirea unor obiective economice în colaborare cu alte țăr
+i, coproducția și subcontractarea ; acordarea de asistență tehnică ; participare
+a la programe de cercetare tehnico-științifică ; societăți mixte. În anul 1976 s
+-au aflat în derulare 260 de acțiuni de cooperare, din care 119 reprezintă livră
+ri de instalații complexe și realizarea de obiective în străinătate, 28 de socie
+tăți mixte de producție în străinătate, 34 de societăți de tip comercial în stră
+inătate, 44 de acțiuni de cooperare și specializare în producție și 6 socie-tăți
+ mixte de producție cu sediul în România.În vederea dezvoltării cooperării, în a
+nul 1976 au fost încheiate 38 de noi acorduri și înțelegeri de colaborare și coo
+perare economică tehnică, s-au perfectat peste 35 noi acțiuni de cooperare, care
+ vizează exportul de mașini, utilaje, echi-pamente și instalații complexe, execu
+tarea de lucrări de construcții-montaj în străinătate, specializarea în producți
+e și asigurarea reci-procă a necesarului prin schimburi echivalente de produse, 
+asigurarea aprovizionării economiei românești cu materii prime, acordarea de asi
+s-tență tehnică etc. Situînd, în conformitate cu orientările gene-rale ale polit
+icii sale externe, pe prim plan dezvoltarea amplă a colaborării cu toate țările 
+socialiste - de care este legată prin aceeași orînduire socială, prin unitatea ț
+elurilor și aspi-rațiilor fundamentale, prin idealurile socialismu-lui și păcii 
+în lume - România a continuat să acționeze, cu fermitate, pentru lărgirea și apr
+o-fundarea schimburilor și cooperării economice cu aceste țări. Pe linia evoluți
+ei deosebit de active din ultimii ani, colaborarea cu țările socialiste a cunosc
+ut în anul 1976 o nouă și puternică dezvoltare, caracterizată prin diver-sificar
+ea gamei mărfurilor livrate reciproc și, în special, prin creșterea ponderii maș
+inilor și utilajelor. Țărilor socialiste continuă să le revină ponderea principa
+lă - aproape jumătate - în totalul comerțului nostru exterior, Uniunea Sovietică
+ fiind primul partener eco-nomic extern al țării noastre. Cu prilejul întîl-niri
+lor și convorbirilor avute de tovarășul Nicolae Ceaușescu cu conducători de part
+id și de stat din țări socialiste - momente de cea mai mare însemnătate în dezvo
+ltarea de ansam-blu a relațiilor de prietenie și colaborare dintre România și ță
+rile respective - au fost stabilite multiple acțiuni de colaborare, identificînd
+u-se, totodată, noi posibilități de extindere a schim-burilor. O contribuție act
+ivă aduce țara noastră la colaborarea în cadrul C.A.E.R. S-a lărgit și apro-fund
+at participarea țării noastre - în cadrilș unor forma de colaborare pe baze bi ș
+i multi-laterale - la activitatea de coordonare a planuri-lor cincinale de dezvo
+ltare a economiilor națio-nale, la adîncirea specializării în producție, la cons
+truirea prin investiții comune, a unor obiec-tive industriale, la crearea de org
+anizații și uniuni economice internaționale, constituite cu sediul pe teritoriul
+ unor țări partenere sau al țării noastre. În conformitate cu hotărîrile Congres
+ului al
 
 OUTPUT TESSERACT:
 ----------------------------------------
-| , y Pa ali IT PTT TI Popor mp ere | pe mere pre er
-bă 4 h ' ] , [i Li
-) d ț
-. 
-. A 4 U eu . u [i r
-Las Participarea activă a României la viața economică intern
-aţională » , BD,
+Participarea activă a României la viața economică internaţională
 
-a a
+tone pa CES OO
+ a AUR NN CN SI RN UP ON SE aere tar e adie
 
-Pi
+Sarcini deosebite stau în fața acti
+vităţii de
+comerţ exterior și cooperare economică înter-
+națională în următorii 
+ani ai actualului cincinăl.
+Pentru pregătirea din timp a tuturor condiţiilor
+nec
+esare îndeplinirii acestor sarcini acordăm
+permanent o atenție principală orient
+ării sorti-
+mentale și ridicării calitative a producţiei desti-
+nate exportului.
+ Concomitent, în vederea obți-
+nerii unei creșteri în 1977 mai mari de 15 la
+sut
+ă a volumului comerțului exterior față de
+realizările din 1976, precum și a unei
+ dinamici
+de 190-—201,4 la sută în perioada 1976-—1980
+cumulat faţă de realizări
+le 1971—1975, desfă-
+surăm o intensă activitate pentru asigurarea din
+timp a por
+tofoliului de comenzi, de contracte
+externe curente și de lungă durată la export
 
+si import, astfel încât să creăm o bază certă de
+desfacere a producţiei destina
+te exportului, cât
+și pentru aprovizionarea de la extern cu pro-
+dusele necesare
+. Și
 
---------------------------------------------------------------------------------
-IMAGINE: page_4_left.png
---------------------------------------------------------------------------------
+Paralel cu formele clasice de comerţ exterior,
+România dezvoltă cooperarea
+ economică înter-
+naţională și tehnico-științijică cu alte state, ca
 
-METRICI:
-   CER: N/A
-   WER: N/A
+modalitate
+ supe ioară de valorijicare a poten-
 
-GROUND TRUTH:
-----------------------------------------
-(lipseste)
+tului um de dimi
 
-OUTPUT TESSERACT:
-----------------------------------------
-ă
-Sarcini deosebite stau în fața activităţii de
-comerț exterior şi coopbrare eco
-nomică înter-
-națională în următorii ani ai actualului cincinăl.
-Pentru pregătir
-ea din timp a tuturor condițiilor
-necesare îndeplinirii acestor sarcini acordăm
+. .
 
-permanent o atenție 'principală orientării sorti-
-mentale şi ridicării calitativ
-e a producţiei desti- |,
-nate. exportului. Concomitent, în vederea obți-
-nerii u
-nei creșteri în '1977 mai mari de 15 la
-sută a volumului comerțului exterior faţ
-ă de
-realizările din 1976, precum şi a'unei dinamici
-de 190—201,4 la sută 'în pe
-rioada 1976—1930,
-cumulat jaţă de realizările 1971—1975, desfă-
-șurăm o intensă 
-activitate pentru asigurarea din
-timp a portofoliului' de comenzi, de contracte
+În vederea dezvoltă
+rii cooperării, în anul 1976
+au fost încheiate 38 de noi acorduri și înțelegeri
 
-externe curente şi de lungă durată la: export !
-şi import, astfel încît să creăm
- o bază certă de
-desfacere a producției destinate exportului, cât
-și pentru apro
-vizionarea de la extern cu -pro-
-dusele necesare, n
+de colaborare și cooperare economică și tehnică,
+s-au perfectat peste 35 noi acț
+iuni de cooperare,
+care vizează exportul de mașini, utilaje, echi-
+pamente și in
+stalaţii complexe, executarea de
+lucrări de construcții-montaj în străinătate,
+s
+pecializarea în producţie și asigurarea reci-
+procă a necesarului prin schimburi
+ echivalente
+de produse, asigurarea aprovizionării economiei
+româneşti cu materi
+i prime, acordarea de asis-
+tență tehnică etc.
 
-Paralel cu formele clasice 
-de comerț exterior,
-România dezvoliă cooperarea economică inter- |
-națională și 
-tehnico-ştiinţifică cu alte state, ca
-o modalitate superioară de valorificare a 
-poten-
-țialului uman şi material, un mijloc de dimi-
-nuare și lichidare a decala
-jelor economice exis-
-tente pe plan mondial, al apropierii între naţi-
-uni, întă
-ririi păcii şi securității internaţionale.
-În ultimul deceniu, întreprinderile r
-omânești au
-derulat cu firme și organizaţii economice străine
-peste 400 de acțiu
-ni de cooperare în diferite
-ramuri industriale. Activitatea de cooperare
-contrib
-uie, cu peste 20% la volumul total al
-schimburilor economice ale ţării noastre.
+Situînd, în conformitate cu orie
+ntările gene-
+rale ale politicii sale externe, pe prim plan
+dezvoltarea amplă a 
+colaborării cu toate țările
+socialiste —— de care este legată prin aceeași
+orînd
+uire socială, prin unitatea țelurilor şi aspi-
+raţiilor fundamentale, prin ideal
+urile socialismu-
+lui și păcii în lume — România a continuat să
+acționeze, cu fe
+rmitate, pentru lărgirea şi apro-
+fundarea schimburilor. și cooperării economice
 
+cu aceste ţări. Pe linia evoluției deosebit de
+active din ultimii ani, colabora
+rea cu ţările
+socialiste a cunoscut în anul 1976 o nouă și
 
-S-a extins practica așezării relaţiilor de cola-
-borare cu diferite țări ale lu
-mii pe baza unor
-acorduri interstatale de lungă durată sau a altor
-instrumente d
-e cooperare industrială și tehnico-
-Științifică. Au fost promovate forme moderne
+„puternică dezvoltar
+e, caracterizată prin diver-
+„sificarea gamei mărfurilor livrate reciproc și,
 
-ȘI eficiente de cooperare economică, în scopul
-folosirii mai largi a avantajelo
-r participării, la
-diviziunea înternaţională a muncii : construirea
-unor obiecti
-ve economice în colaborare cu alte
-țări, coproducţia și subcontractarea ; acorda
-rea
-de asistenţă tehnică ; participarea la programe
-de cercetare tehnico-știinţi
-fică ; societăți mixte.
-
-În anul 1976 s-au aflat în derulare 260 de
-acţiuni, de 
-cooperare, din care 119 reprezintă
-lor ări de instalații complexe și realizarea 
-de
-de etive ţia pir inătate, 28 de societăţi miste
-(ip comeriiai Ss , vale, 34 d
-e societăți de
-Cooperare și s eciali miărate, i de ac; LU d e
-tăți miza pecia iz
-are în producție și 6 socie-
-
-producţie cu sediul în România.
+a
 
 
---------------------------------------------------------------------------------
-IMAGINE: page_4_right.png
---------------------------------------------------------------------------------
-
-METRICI:
-   CER: N/A
-   WER: N/A
-
-GROUND TRUTH:
-----------------------------------------
-(lipseste)
-
-OUTPUT TESSERACT:
-----------------------------------------
-LEI FI ?
-
-' În vederea dezvoltării cooperării, în aratati 976 *
-au fost încheiat
-e 38 de noi deorduri Si înțelegeri
-de colaborăre și cooperare econoriică și, teh
-nică, i
-
-' s-au perfectat peste 35 noi acțiuni, de coopetare, ”
-care vizează exp
-ortul de maşini,. utilaje, echi-
-pamente 'și instalaţii compleze, executărea de,
-
-lucrări de construcţii-montaj în străinătate,
-specializarea în producție” şi as
-igurarea reci-
-procă a necesarului prin schimburi echivalente
-de pr oduse, asigu
-rarea aprovizionării' economiei
-românești, cu maăterii. prime, atordarea de asis
-- “
-tență tehnică etc, ”
-
-1 Situinăi i în conformitate cu orientările. . gene-
-r
-ale ale politicii sale" externe, pe prim, plan
-dezvoltarea amplă a colaborării c
-u toate ţările
-socialiste ! — de care este legată prin 'aceeași
-orînduire: socia
-lă, prin unitatea felurilor. ; şi'aspi-
-
-rațiilor fundamentale, prin idealurile 
-socialismu-
-
-f
-
-lui şi păcii în,lume — România a continuat să
-acționeze, cu ferm
-itate, pentru lărgirea. şi. apro= 2
-fundarea schimburilor și cooperării economic
-e /
-cu aceste țări. Pe linia evoluţiei deosebit: de Ey,
-active din, ultimii ani,
- colaborarea cu ţările” 3
-socialiste a cunoscut în anul 1976 o nouă: și p/
-puter
-nică dezvoltare, caracterizată prin diver- /
-
-sificarea gamei mărfurilor livrate
- reciproc şi,
-în special, prin creșterea ponderii maşinilor şi d
-utilajelor. Țăr
-ilor socialiste continuă să: le
-revină ponderea principală — aproape jumă- |
-tat
-e — în fotalul comerțului nostru exterior,
-Uniunea Sovietică fiind primul parten
-er eco-
-nomic extern al ţării noastre. Cu prilejul întâl-
-nirilor şi convorbiril
-or avute de tovarășul |
-Nicolae Ceaușescu cu conducători, de partid și
-de stat d
-in țări socialiste — momente de cea
-mai mare însemnătate în, dezvoltarea de ansa
-m-
-blu a relaţiilor de prietenie şi colaborare dintre |
-România, și țările respe
-ctive — au fost stabilite
-multiple acţiuni de colaborare, identificându-se,
-toto
-dată, noi posibilități de extindere a schim-
-burilor. i
-
-O contribuţie activă ad
-uce ţara noastră la
-colaborarea în cadrul C.A.E.R. S-a lărgit șiapro-
-fundat par
-ticiparea ţării noastre — în cadrul
-unor forme de colaborare pe baze bi şi multi
-- |
-laterale — la activitatea de coordonare a planuri-
-lor cincinale de dezvolta
-re, a economiilor naţio-
-nale, la adîncirea specializării în producție, la
-const
-ruirea, prin investiții comune, a unor obiec-
-tive industriale, la crearea de or
-ganizaţii şi
-uniuni economice internaţionale, constituite cu
-sediul pe 'teritori
-ul unor țări partenere sau al
-țării noastre,
-
-În conformitate cu hotărtrile Cong
-resului a)
-
-m
+pecia, in creșterea ponde
+o
 
 
 ================================================================================

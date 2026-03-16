@@ -106,22 +106,25 @@ def detect_layout_lines(gray_img: np.ndarray):
         h_line_y = last_crossing_row + 25  # a little offset below the last row of the header
         print(f"Header detected, ends at y={h_line_y}")
     
-    # now we check for a subheader from h_line_y
-    margin = 30
-    sub_search_end = min(h_line_y + 400, h)
-    last_sub_crossing_row = None
-    for row in range(h_line_y + 20, sub_search_end):  # +20 to skip past the header line itself
-        left_zone = binary[row, v_line_x - margin : v_line_x]
-        right_zone = binary[row, v_line_x : v_line_x + margin]
-        if np.sum(left_zone) > 0 and np.sum(right_zone) > 0:
-            has_subheader = True
-            last_sub_crossing_row = row
+    # now we check for a subheader from h_line_y (only if header was found)
+    if has_header:
+        margin = 30
+        sub_search_end = min(h_line_y + 400, h)
+        last_sub_crossing_row = None
+        for row in range(h_line_y + 20, sub_search_end):  # +20 to skip past the header line itself
+            left_zone = binary[row, v_line_x - margin : v_line_x]
+            right_zone = binary[row, v_line_x : v_line_x + margin]
+            if np.sum(left_zone) > 0 and np.sum(right_zone) > 0:
+                has_subheader = True
+                last_sub_crossing_row = row
 
-    if has_subheader:
-        h_line_y_subheader = last_sub_crossing_row + 20
-        print(f"Subheader detected, ends at y={h_line_y_subheader}")
+        if has_subheader:
+            h_line_y_subheader = last_sub_crossing_row + 20
+            print(f"Subheader detected, ends at y={h_line_y_subheader}")
+        else:
+            print("No subheader detected.")
     else:
-        print("No subheader detected.")
+        print("No header detected, skipping subheader search.")
 
     return v_line_x, h_line_y, h_line_y_subheader
 

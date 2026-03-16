@@ -10,9 +10,7 @@ def extract_images_from_pdf(pdf_path: str, output_dir: str = None, rotate: int =
     
     Args:
         pdf_path:   Path to the PDF file
-        output_dir: (Optional) Directory to save the extracted images.
-                    If None, the images are not saved to disk,
-                    but are returned only as PIL objects.
+        output_dir: Directory to save the extracted images.
         rotate:     Rotation to apply to each image in degrees clockwise.
                     Must be 0, 90, 180, or 270.
 
@@ -53,7 +51,6 @@ def extract_images_from_pdf(pdf_path: str, output_dir: str = None, rotate: int =
 
         # Rotate the image if needed
         if rotate != 0:
-            # PIL uses counter-clockwise, so we negate for clockwise
             pil_image = pil_image.rotate(-rotate, expand=True)
 
         images.append(pil_image)
@@ -71,7 +68,6 @@ def extract_images_from_pdf(pdf_path: str, output_dir: str = None, rotate: int =
 
 
 if __name__ == "__main__":
-    # Example of use
     pdf_file = "pictures.pdf"
     output_folder = "../extracted_images"
 

@@ -288,8 +288,8 @@ def compute_per_page_metrics(df: pd.DataFrame,
     df = df.dropna(subset=["PageNum"])
     df["PageNum"] = df["PageNum"].astype(int)
 
-    # Sort parts inside each page: header(0) → left(1) → right(2)
-    part_order = {"header": 0, "left": 1, "right": 2, "full": 0}
+    # Sort parts inside each page: header(0) → subheader(1) → left(2) → right(3)
+    part_order = {"header": 0, "subheader": 1, "left": 2, "right": 3, "full": 0}
 
     def _part_key(filename: str) -> int:
         parts = os.path.splitext(filename)[0].split("_")
@@ -544,9 +544,9 @@ def combine_texts(output_dir: str):
         # Find all txt files and group by page number
         txt_files = sorted(glob.glob(os.path.join(engine_dir, "*.txt")))
         
-        # Group by page: page_1_header, page_1_left, page_1_right, ...
-        # Sort order: header first, then left, then right
-        part_order = {"header": 0, "left": 1, "right": 2, "full": 0}
+        # Group by page: page_1_header, page_1_subheader, page_1_left, page_1_right, ...
+        # Sort order: header first, then subheader, then left, then right
+        part_order = {"header": 0, "subheader": 1, "left": 2, "right": 3, "full": 0}
         
         def sort_key(path):
             name = os.path.splitext(os.path.basename(path))[0]  # e.g. "page_1_left"
@@ -565,6 +565,17 @@ def combine_texts(output_dir: str):
             name = os.path.splitext(os.path.basename(txt_path))[0]
             parts = name.split("_")
             page_num = parts[1] if len(parts) > 1 else "?"
+            part_type = parts[2] if len(parts) > 2 else "full"
+            
+            # Map part_type to a tag
+            tag_map = {
+                "header": "[HEADER]",
+                "subheader": "[SUBHEADER]",
+                "left": "[LEFT_COLUMN]",
+                "right": "[RIGHT_COLUMN]",
+                "full": "[FULL_PAGE]"
+            }
+            tag = tag_map.get(part_type, f"[{part_type.upper()}]")
             
             # Add page separator when page changes
             if page_num != current_page:
@@ -576,7 +587,7 @@ def combine_texts(output_dir: str):
             with open(txt_path, "r", encoding="utf-8") as f:
                 text = f.read().strip()
             if text:
-                combined.append(text)
+                combined.append(f"{tag}\n{text}")
         
         # Save combined file
         combined_path = os.path.join(output_dir, f"{engine}.txt")

@@ -30,15 +30,21 @@ def extract_page(text: str, page_num: int) -> str:
 
 
 def build_prompt(tokenizer, ocr_text: str) -> str:
-    """prompt-ul în format chat Llama 3.1."""
     system_msg = (
-        "Ești un asistent specializat în corectarea textelor obținute prin OCR "
-        "(Optical Character Recognition) din documente românești vechi. "
-        "Textul pe care îl primești conține erori tipice OCR: litere confundate, "
-        "cuvinte lipite sau despărțite greșit, diacritice lipsă sau greșite, "
-        "caractere de zgomot. Corectează textul păstrând conținutul original "
-        "și structura paragrafelor. Returnează DOAR textul corectat, "
-        "fără explicații sau comentarii."
+        "Ești un asistent expert în corectarea textelor OCR din documente românești vechi (1976-1989).\n\n"
+        "REGULI:\n"
+        "1. REPARĂ ERORILE VIZUALE OCR: Literele citite greșit trebuie corectate logic din context "
+        "(ex: 'Mul' în loc de 'Anul', 'I' în loc de 'l', 'm' în loc de 'rn').\n"
+        "2. FĂRĂ PARAFRAZARE: Nu înlocui cuvintele corecte cu sinonime moderne "
+        "(ex: păstrează 'viceprim-ministru', NU scrie 'vicepremier').\n"
+        "3. ORTOGRAFIE: Folosește 'î' din 'i' (ex: 'sînt', 'hotărîre') și diacritice corecte.\n"
+        "4. ELIMINĂ ETICHETELE: Șterge complet [HEADER], [SUBHEADER], [LEFT_COLUMN], [RIGHT_COLUMN].\n\n"
+        "EXEMPLE DE CORECTARE (AȘA TREBUIE SĂ RĂSPUNZI):\n"
+        "Text OCR: '[HEADER] Mul 1976 \\n [LEFT_COLUMN] Tovarasul viceprim-ministru a sosit la dezvol- \\n tarea uzinei.'\n"
+        "Corectat: 'Anul 1976 \\n Tovarășul viceprim-ministru a sosit la dezvoltarea uzinei.'\n\n"
+        "Text OCR: 'oamenii muncii smt chemati \\n [RIGHT_COLUMN] la cincinal'\n"
+        "Corectat: 'oamenii muncii sînt chemați la cincinal'\n\n"
+        "Răspunde EXCLUSIV cu textul corectat, fără alte introduceri sau explicații."
     )
 
     chat = [
@@ -116,16 +122,23 @@ def main():
                 input_ids=input_ids,
                 attention_mask=attention_mask,
                 max_new_tokens=MAX_NEW_TOKENS,
-                temperature=0.3,
+                temperature=0.1,
                 top_p=0.9,
-                do_sample=True,
+                do_sample=False,            # greedy decoding: alege mereu cel mai logic cuvant, previne halucinatiile/sinonimele
                 repetition_penalty=1.1,
                 pad_token_id=tokenizer.pad_token_id,
             )
 
-        # decodifică doar tokens noi (fără prompt)
+        # decodifica doar tokens noi (fara prompt)
         new_tokens = outputs[0][input_ids.shape[1]:]
         corrected_text = tokenizer.decode(new_tokens, skip_special_tokens=True).strip()
+
+        # stergem orice a mai ramas de tipul [HEADER], [LEFT_COLUMN] etc.
+        # acest regex cauta orice cuvant cu majuscule incadrat de paranteze drepte si il sterge.
+        corrected_text = re.sub(r'\[[A-Z_]+\]', '', corrected_text)
+        
+        # eliminam spatiile goale multiple lasate in urma stergerii etichetelor
+        corrected_text = re.sub(r'\n\s*\n', '\n\n', corrected_text).strip()
 
         print(f"\n--- TEXT CORECTAT ({len(corrected_text)} caractere) ---")
         print(corrected_text[:500] + ("..." if len(corrected_text) > 500 else ""))

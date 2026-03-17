@@ -1,6 +1,13 @@
 --- Page 2 ---
+[HEADER]
 PARTICIPAREA ACTIVĂ A ROMÂNIEI
 IA VIATA ECONOMICĂ INTERNAȚIONALĂ
+[SUBHEADER]
+Ion PĂŢAN
+ministrul comerțului exterior
+și cooperării economice internaționale
+viceprim-ministru al guvernului
+[LEFT_COLUMN]
 Mul 1976 — primul an din actualul plan
 cincinal, al afirmării revoluției tehnico-
 științifice — a marcat o prezență activă a țării
@@ -44,6 +51,7 @@ România se bucură în lume ca partener eco-
 nomic și ca sactor proeminent în lupta pentru
 progres, prosperitate și pace pe plan interna-
 sumul au consirmat pe deplin justețea și rea-
+[RIGHT_COLUMN]
 lismul politicii interne și externe a partidului
 și statului nostru, fundamentată în documen-
 tele programatice ale Congresului al XI-lea al
@@ -86,12 +94,9 @@ tul economic mondial este faptul că, în ultimii
 ani, schimburile economice externe s-au dezvol-
 tat într-un ritm mai înalt decît cel înregistrat
 de alți indicatori sintetici, ceea ce se înscrie lu
-Ion PĂŢAN
-ministrul comerțului exterior
-și cooperării economice internaționale
-viceprim-ministru al guvernului
 
 --- Page 3 ---
+[HEADER]
 mondiale
 economiei
 Conjunctura
@@ -99,6 +104,7 @@ Conjunctura
 ___
 ___
 _______________________________________
+[LEFT_COLUMN]
 tendințele calitative de pe arena economică in-
 ternațională. Astfel, în perioada 1971—1975, rit-
 mul mediu anual de creștere al comerțului exte-
@@ -153,6 +159,7 @@ ciată drept cea mai puternică din anii postbelici
 junctura mondială în 1976, deși a marcat o
 anumită revenire față de anii trecuți, a resimțit
 consecințele acestei crize, indicatorii economici
+[RIGHT_COLUMN]
 evidențiind.o slăbire a tendințelor de relansare
 economică în semestrul al doilea al anului, com-
 parativ cu primul semestru, ceea ce s-a reflec-
@@ -209,10 +216,12 @@ noi impuse de aceste țări la importul de pro-
 duse finite.
 
 --- Page 4 ---
+[HEADER]
 <math>\overline{\phantom{a}}</math>
 Participarea activă a României la viața economică internațională
 . . . . . . . . . . . . . . . . . . . . 
 - - - - - - - - - - - - - - - - - - -
+[LEFT_COLUMN]
 Sarcini deosebite stau în fața activității de
 comert exterior și cooperare economică inter-
 națională în următorii ani ai actualului cincinal.
@@ -267,6 +276,7 @@ de producție în străinătate, 34 de societăți de
 tip comercial în străinătate, 44 de acțiuni de
 cooperare și specializare în producție și 6 socie-
 tasi mixte de producție cu sediul în România.
+[RIGHT_COLUMN]
 In vederea dezvoltării cooperării, în anul 1976
 au sost încheiate 38 de noi acorduri și înțelegeri
 de colaborare și cooperare economică și tehnică,

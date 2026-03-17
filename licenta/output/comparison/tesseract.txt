@@ -1,38 +1,16 @@
---- Page 1 ---
-ae
-
-i
-îsi
-fa
-
-7
-PI:
-Fata, AZ 4
-Led dtp? a Lip
-
-po
-//
-
-sei
-ES
-
-Sa
-
-ces
-SE
-
-A SERI i
-Tot a
-SSE Sa S IS SI
-
-ESI eee
-| e MONDI"”
-
 --- Page 2 ---
+[HEADER]
 PARTICIPAREA ACTIVĂ A ROMÂNIEI
 "A VIATA ECONOMICĂ INTERNAȚIONALĂ
 
 “
+[SUBHEADER]
+lon PĂȚAN
+
+ministrul comerţului exterior
+și cooperării economice internaţionale
+viceprim-ministru al guvernului
+[LEFT_COLUMN]
 A nul 1976 — primul an din actualul plan
 cincinal, al afirmării revoluţiei tehnico-
 
@@ -85,6 +63,7 @@ a, i
 —--
 
 ——
+[RIGHT_COLUMN]
 lismul politicii interne și externe a partidului
 și statului nostru, fundamentată în documen-
 tele programatice ale Congresului al Xl-lea al
@@ -130,14 +109,11 @@ tul economic mondial este faptul că, în ultimii
 ani, schimburile economice externe s-au dezval-
 tat într-un ritm mai înalt decit cel inregistrat
 de alți indicatori sintetici, ceea ce se înscria în
-lon PĂȚAN
-
-ministrul comerţului exterior
-și cooperării economice internaţionale
-viceprim-ministru al guvernului
 
 --- Page 3 ---
+[HEADER]
 4 ) Conjunctura economiei mondiale
+[LEFT_COLUMN]
 tendințele calitative de pe arena economică în-
 ternaţională. Astfel, în perioada 1971—1975, rit=
 mul mediu anual de creştere al comerțului exte-
@@ -196,6 +172,7 @@ in cadrul economiei ţărilor capitaliste. Con-
 junctura mondială în 1976, deși a marcat o
 anumită revenire faţă de anii trecuți, a resimţit
 consecințele ucestei crize, indicatorii economici
+[RIGHT_COLUMN]
 evidențiind. o slăbire a tendinţelor de relansare
 economică în semestrul al doilea al anului, com-
 parativ cu primul semestru, ceea ce s-a reflec-
@@ -259,12 +236,14 @@ duse finite.
 UIT re a te CASTA ai
 
 --- Page 4 ---
+[HEADER]
 Tep e Pre
 Te a
 i
 
 Participarea activă a României la viața economică internaţională 5
 E E E ERE E a e a Da
+[LEFT_COLUMN]
 Sarcini deosebite stau în faţa activității de
 comerț exterior şi cooperare economică înter-
 națională în următorii ani ai actualului cincinal.
@@ -325,6 +304,7 @@ tă[i mixte del. zare în producţie și 6 socie-
 producție cu sediul în România.
 
 DD RI OO OI a a id
+[RIGHT_COLUMN]
 În vederea dezvoltării cooperării, în anul 1976
 au fost încheiate 38 de noi acorduri și înțelegeri
 de colaborare și cooperare economică și tehnică,

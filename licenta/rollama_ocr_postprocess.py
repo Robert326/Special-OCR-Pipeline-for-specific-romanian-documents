@@ -15,7 +15,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 MODEL_PATH = os.path.expanduser("~/models/rollama")
 COMPARISON_DIR = os.path.join(os.path.dirname(__file__), "output", "comparison")
 OUTPUT_DIR = os.path.join(COMPARISON_DIR, "rollama")
-OCR_FILES = ["surya.txt", "tesseract.txt", "easyocr.txt"]
+OCR_FILES = ["surya.txt"]
 TARGET_PAGE = 2  # procesam doar pagina 2 pentru test
 MAX_NEW_TOKENS = 2048
 
@@ -44,6 +44,7 @@ def build_prompt(tokenizer, ocr_text: str) -> str:
         "Corectat: 'Anul 1976 \\n Tovarășul viceprim-ministru a sosit la dezvoltarea uzinei.'\n\n"
         "Text OCR: 'oamenii muncii smt chemati \\n [RIGHT_COLUMN] la cincinal'\n"
         "Corectat: 'oamenii muncii sînt chemați la cincinal'\n\n"
+        "La finalul textului pot fi cuvinte incomplete deoarece ele continuă pe pagina următoare. Nu completa cuvintele incomplete de la sfârșitul textului.\n\n"
         "Răspunde EXCLUSIV cu textul corectat, fără alte introduceri sau explicații."
     )
 

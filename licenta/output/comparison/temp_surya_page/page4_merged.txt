@@ -33,7 +33,7 @@ uni, întăririi păcii și securității internaționale.
 derulat cu firme și organizații economice străine
 peste 400 de acțiuni de cooperare în diferite
 ramuri industriale. Activitatea de cooperare
-contribuie cu peste  la volumul total al
+contribuie cu peste <math>20^{\circ}/_{0}</math> la volumul total al
 schimburilor economice ale țării noastre.
 S-a extins practica așezării relațiilor de cola-
 borare cu diferite țări ale lumii pe baza unor
@@ -55,7 +55,6 @@ de producție în străinătate, 34 de societăți de
 tip comercial în străinătate, 44 de acțiuni de
 cooperare și specializare în producție și 6 socie-
 tasi mixte de producție cu sediul în România.
-[RIGHT_COLUMN]
 In vederea dezvoltării cooperării, în anul 1976
 au sost încheiate 38 de noi acorduri și înțelegeri
 de colaborare și cooperare economică și tehnică,

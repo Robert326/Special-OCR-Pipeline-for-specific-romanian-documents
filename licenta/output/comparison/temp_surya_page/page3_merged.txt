@@ -1,14 +1,9 @@
 [HEADER]
-Conjunctura economiei mondiale
+mondiale
+economiei
+Conjunctura
+
 [LEFT_COLUMN]
-tendințele calitative de pe arena economică in-
-ternațională. Astfel, în perioada 1971—1975, rit-
-mul mediu anual de creștere al comerțului exte-
-rior al țării noastre a sost de 18,3 la sută, mai
-rapid în comparație atît cu ritmul de creștere
-al produsului social (10,6 la sută pe an), venitu-
-lui național (11,3 la sută pe an), cît și cu cel al
-producției industriale (13 la sută pe an).
 Creșterea accelerată a relațiilor economice
 externe ale României a condus la sporirea pon-
 derii activității de comerț exterior și cooperare
@@ -55,7 +50,6 @@ ciată drept cea mai puternică din anii postbelici
 junctura mondială în 1976, deși a marcat o
 anumită revenire față de anii trecuți, a resimțit
 consecințele acestei crize, indicatorii economici
-[RIGHT_COLUMN]
 evidențiind.o slăbire a tendințelor de relansare
 economică în semestrul al doilea al anului, com-
 parativ cu primul semestru, ceea ce s-a reflec-

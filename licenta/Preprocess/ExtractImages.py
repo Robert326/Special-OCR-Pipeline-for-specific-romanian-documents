@@ -48,6 +48,8 @@ def extract_images_from_pdf(pdf_path: str, output_dir: str = None, rotate: int =
         image_bytes = base_image["image"]
 
         pil_image = Image.open(io.BytesIO(image_bytes))
+        if pil_image.mode != "RGB":
+            pil_image = pil_image.convert("RGB")
 
         # Rotate the image if needed
         if rotate != 0:

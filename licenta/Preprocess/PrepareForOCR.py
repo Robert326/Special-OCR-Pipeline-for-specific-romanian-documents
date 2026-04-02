@@ -107,22 +107,39 @@ def detect_layout_lines(gray_img: np.ndarray):
         print(f"Header detected, ends at y={h_line_y}")
     
     # now we check for a subheader from h_line_y (only if header was found)
+    # Key insight: Between the two columns there is a GAP of ~15-20px on each
+    # side of the thin printed separator line (1-2px at v_line_x).
+    #   - Column text STOPS before this gap (no ink in the gap zone).
+    #   - Subheader text CROSSES through the gap (ink present in the gap zone).
+    # We check pixels in the gap zone (v_line_x ± 3..12px), excluding the
+    # separator line itself, to see if actual text is present.
     if has_header:
-        margin = 30
+        gap_inner = 3   # skip ±3px around v_line_x (the printed separator line)
+        gap_outer = 12  # the gap zone extends ~12px from v_line_x
+        ink_threshold = 255 * 2  # require at least 2 ink pixels in each gap zone
         sub_search_end = min(h_line_y + 400, h)
         last_sub_crossing_row = None
-        for row in range(h_line_y + 20, sub_search_end):  # +20 to skip past the header line itself
-            left_zone = binary[row, v_line_x - margin : v_line_x]
-            right_zone = binary[row, v_line_x : v_line_x + margin]
-            if np.sum(left_zone) > 0 and np.sum(right_zone) > 0:
+        crossing_row_count = 0
+
+        for row in range(h_line_y + 20, sub_search_end):
+            # Check the gap zone on each side (excluding the separator line)
+            left_gap = binary[row, v_line_x - gap_outer : v_line_x - gap_inner]
+            right_gap = binary[row, v_line_x + gap_inner : v_line_x + gap_outer]
+
+            # If both gap zones have significant ink, text crosses through
+            if np.sum(left_gap) > ink_threshold and np.sum(right_gap) > ink_threshold:
                 has_subheader = True
                 last_sub_crossing_row = row
+                crossing_row_count += 1
 
-        if has_subheader:
+        # Require at least a few rows of crossing text to confirm subheader
+        if has_subheader and crossing_row_count >= 5:
             h_line_y_subheader = last_sub_crossing_row + 20
-            print(f"Subheader detected, ends at y={h_line_y_subheader}")
+            print(f"Subheader detected, ends at y={h_line_y_subheader} ({crossing_row_count} crossing rows)")
         else:
-            print("No subheader detected.")
+            has_subheader = False
+            h_line_y_subheader = None
+            print(f"No subheader detected. (crossing rows: {crossing_row_count})")
     else:
         print("No header detected, skipping subheader search.")
 
@@ -363,10 +380,13 @@ def prepare_batch(pil_images: list[Image.Image],
 
 
 if __name__ == "__main__":
-    from ExtractImages import extract_images_from_pdf
+    from extractpdf2 import extract_images_from_pdf
 
-    pdf_file = "pictures.pdf"
-    raw_images = extract_images_from_pdf(pdf_file, rotate=90)
+    pdf_file = "test2.pdf"
+    # raw_images = extract_images_from_pdf(pdf_file)
 
+
+    # raw_images = the only image from ../extracted_images/test2_page_40.png
+    raw_images = [Image.open("../extracted_images/test2_page_40.png")]
     prepared = prepare_batch(raw_images, output_dir="../preprocessed_images", split=True)
     print(f"Prepared {len(prepared)} images for OCR.")

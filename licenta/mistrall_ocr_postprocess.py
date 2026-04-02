@@ -182,13 +182,13 @@ def run_inference(ocr_text: str, max_retries: int = 3, retry_delay: float = 5.0)
                     "options": {
                         "temperature": 0.1,
                         "num_predict": 2048,
-                        "num_ctx": 6144,
+                        "num_ctx": 8192,
                         "num_gpu": 99,
                         "num_thread": 8,
                         "repeat_penalty": 1.1,
                     }
                 },
-                timeout=120  # secunde — pagini mari pot dura
+                timeout=300  # secunde — pagini mari pot dura
             )
             response.raise_for_status()
             return response.json()["response"].strip()

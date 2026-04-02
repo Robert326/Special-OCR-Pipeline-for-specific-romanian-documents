@@ -1,6 +1,5 @@
 """
 Post-procesare OCR cu Mistral Small 22B via Ollama
-Procesează doar Page 2 ca test rapid.
 """
 
 import os
@@ -149,12 +148,11 @@ def build_prompt(ocr_text: str) -> str:
         "- [HEADER] = titlul articolului\n"
         "- [SUBHEADER] = subtitlul sau autorul (poate nu exista in toate cazurile)\n"
         "- [LEFT_COLUMN] = coloana stângă a paginii\n"
-        "- [RIGHT_COLUMN] = coloana dreaptă a paginii\n\n"
         "Sarcina ta: corectează erorile OCR din fiecare secțiune și returnează textul complet "
         "cu toate cele 3 etichete  daca exista subheader exact unde erau\n\n"
         "REGULI:\n"
         "1. REPARĂ ERORILE OCR: litere confundate vizual din context "
-        "(ex: 'Mul 1976' -> 'Anul 1976', 'sost' -> 'fost', 'esorturi' -> 'eforturi', 'actor' -> 'factor', 'consfirmat' -> 'confirmat', 'orinduirea' -> 'orînduirea').\n"
+        "(ex: 'Mul 1976' -> 'Anul 1976', 'sost' -> 'fost', 'esorturi' -> 'eforturi', 'actor' -> 'factor', 'consfirmat' -> 'confirmat', 'orinduirea' -> 'orînduirea', 'IA VIATA' -> 'LA VIAȚA').\n"
         "2. LIPEȘTE cuvintele rupte cu cratimă la sfârșit de rând (ex: 'dezvol-\\ntarea' -> 'dezvoltarea').\n"
         "3. PĂSTREAZĂ vocabularul epocii: 'sînt', 'hotărîre', 'orinduire', 'cincinal', 'tovarășul', 'viceprim-ministru'.\n"
         "4. NU parafraza, NU adăuga, NU continua textul dacă se termină brusc.\n"

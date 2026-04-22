@@ -62,88 +62,140 @@ def crop_to_content(gray_img: np.ndarray, threshold_ratio: float = 0.05, padding
     print(f"Crop: ({left}, {top}) -> ({right}, {bottom})  [original: {w}x{h}]")
     return gray_img[top:bottom, left:right]
 
-def detect_layout_lines(gray_img: np.ndarray):
+def _find_vertical_rule(binary, h, w):
+    """Gaseste cea mai lunga succesiune continua de pixeli negri pe o coloana,
+    in banda centrala a paginii."""
+    col0, col1 = int(w * 0.25), int(w * 0.75)
+    min_rule_h = h // 5      # mai permisiv decat h//4
+
+    candidates = []   # (x, run_length, run_top)
+    for x in range(col0, col1):
+        col = binary[:, x].astype(np.int32)
+        padded = np.concatenate([[0], col, [0]])
+        diff   = np.diff(padded)
+        starts = np.where(diff > 0)[0]
+        ends   = np.where(diff < 0)[0]
+        if len(starts) == 0:
+            continue
+        runs = ends - starts
+        k = int(np.argmax(runs))
+        if runs[k] >= min_rule_h:
+            candidates.append((x, int(runs[k]), int(starts[k])))
+
+    if not candidates:
+        # Fallback: valea de whitespace din histograma coloanelor
+        col_sums = np.sum(binary[:, col0:col1], axis=0).astype(float)
+        smooth   = max(10, (col1 - col0) // 30)
+        col_sm   = np.convolve(col_sums, np.ones(smooth) / smooth, mode='same')
+        v_line_x = int(np.argmin(col_sm)) + col0
+        print(f"No printed rule -> fallback x={v_line_x}")
+        return v_line_x, None
+
+    # Cea mai lunga linie detectata
+    candidates.sort(key=lambda c: -c[1])
+    best_x, best_len, _ = candidates[0]
+
+    # Grupeaza coloanele vecine care au run-uri aproape la fel de lungi
+    cluster = [c for c in candidates
+               if c[1] >= 0.8 * best_len and abs(c[0] - best_x) < 10]
+
+    xs   = [c[0] for c in cluster]
+    tops = [c[2] for c in cluster]
+    v_line_x  = int(np.median(xs))
+    rule_top  = int(np.min(tops))   # cel mai de sus punct al clusterului
+
+    print(f"Printed rule: x={v_line_x}, top y={rule_top} "
+          f"(cluster size {len(cluster)}, run length {best_len})")
+    return v_line_x, rule_top
+
+
+def _find_two_column_start(binary, h, w, v_line_x):
     """
-    Detect vertical split line and optionally a horizontal header line.
-    
     Returns:
-        v_line_x: X coordinate of the vertical column separator.
-        h_line_y: Y coordinate of the header separator, or None if no header detected.
+        (body_start, method)
+        method = 'horizontal_rule'  -> semnal puternic, trust always
+        method = 'vertical_rule'    -> fallback, aplica MIN_HEADER_H
+        method = None               -> nimic gasit
     """
+    # === 1. Densitate maxima in primul sfert ===
+    top_band_h = max(30, h // 4)
+    row_ink    = np.sum(binary[:top_band_h, :] > 0, axis=1)
+
+    max_row     = int(np.argmax(row_ink))
+    max_density = int(row_ink[max_row])
+
+    if max_density > w * 0.5:
+        # extinde in jos pe toata grosimea liniei
+        last_y = max_row
+        while last_y + 1 < top_band_h and row_ink[last_y + 1] > w * 0.5:
+            last_y += 1
+        body_start = last_y + max(3, h // 200)
+        print(f"_find_two_column_start: HORIZONTAL rule la y={max_row}..{last_y} "
+              f"({100*max_density/w:.0f}% latime), body_start={body_start}")
+        return body_start, 'horizontal_rule'
+
+    # === 2. Top of vertical rule (paginile cu titlu) ===
+    band = max(3, w // 400)
+    x0 = max(0, v_line_x - band)
+    x1 = min(w, v_line_x + band + 1)
+    strip   = binary[:, x0:x1]
+    has_ink = np.any(strip > 0, axis=1).astype(np.uint8)
+
+    gap_close = max(5, h // 80)
+    has_ink_smooth = cv2.morphologyEx(
+        has_ink.reshape(-1, 1),
+        cv2.MORPH_CLOSE,
+        np.ones((gap_close, 1), np.uint8)
+    ).flatten()
+
+    padded = np.concatenate([[0], has_ink_smooth, [0]]).astype(np.int32)
+    diff   = np.diff(padded)
+    starts = np.where(diff > 0)[0]
+    ends   = np.where(diff < 0)[0]
+    if len(starts) == 0:
+        return None, None
+
+    runs = ends - starts
+    k = int(np.argmax(runs))
+    if runs[k] < h // 5:
+        return None, None
+
+    rule_top = int(starts[k])
+    print(f"_find_two_column_start: VERTICAL rule top y={rule_top}")
+    return rule_top, 'vertical_rule'
+
+
+def detect_layout_lines(gray_img):
     _, binary = cv2.threshold(gray_img, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
     h, w = binary.shape
+    print(f"Image size: {w}x{h}")
 
-    v_start, v_end = int(w * 0.4), int(w * 0.6)
-    v_hist = np.sum(binary[:, v_start:v_end], axis=0)
-    v_line_x = np.argmax(v_hist) + v_start
+    close_k       = cv2.getStructuringElement(cv2.MORPH_RECT, (1, max(3, h // 200)))
+    binary_closed = cv2.morphologyEx(binary, cv2.MORPH_CLOSE, close_k)
 
-    h_search = min(400, h // 3)
+    v_line_x, _ = _find_vertical_rule(binary_closed, h, w)
 
-    has_header = False
-    h_line_y = None
-    has_subheader = False
-    h_line_y_subheader = None
+    h_split_y, method = _find_two_column_start(binary, h, w, v_line_x)
 
-    margin = 30
-    for row in range(h_search):
-        left_zone = binary[row, v_line_x - margin : v_line_x]
-        right_zone = binary[row, v_line_x : v_line_x + margin]
-        
-        # if both zones has text -> the row crosses the vertical line -> it's a header
-        if np.sum(left_zone) > 0 and np.sum(right_zone) > 0:
-            has_header = True
-
-    if has_header:
-        # find where the header ends: the last row in the top area
-        # where the text crosses the vertical line
-        last_crossing_row = 0
-        for row in range(h_search):
-            left_zone = binary[row, v_line_x - margin : v_line_x]
-            right_zone = binary[row, v_line_x : v_line_x + margin]
-            if np.sum(left_zone) > 0 and np.sum(right_zone) > 0:
-                last_crossing_row = row
-        
-        h_line_y = last_crossing_row + 25  # a little offset below the last row of the header
-        print(f"Header detected, ends at y={h_line_y}")
-    
-    # now we check for a subheader from h_line_y (only if header was found)
-    # Key insight: Between the two columns there is a GAP of ~15-20px on each
-    # side of the thin printed separator line (1-2px at v_line_x).
-    #   - Column text STOPS before this gap (no ink in the gap zone).
-    #   - Subheader text CROSSES through the gap (ink present in the gap zone).
-    # We check pixels in the gap zone (v_line_x ± 3..12px), excluding the
-    # separator line itself, to see if actual text is present.
-    if has_header:
-        gap_inner = 3   # skip ±3px around v_line_x (the printed separator line)
-        gap_outer = 12  # the gap zone extends ~12px from v_line_x
-        ink_threshold = 255 * 2  # require at least 2 ink pixels in each gap zone
-        sub_search_end = min(h_line_y + 400, h)
-        last_sub_crossing_row = None
-        crossing_row_count = 0
-
-        for row in range(h_line_y + 20, sub_search_end):
-            # Check the gap zone on each side (excluding the separator line)
-            left_gap = binary[row, v_line_x - gap_outer : v_line_x - gap_inner]
-            right_gap = binary[row, v_line_x + gap_inner : v_line_x + gap_outer]
-
-            # If both gap zones have significant ink, text crosses through
-            if np.sum(left_gap) > ink_threshold and np.sum(right_gap) > ink_threshold:
-                has_subheader = True
-                last_sub_crossing_row = row
-                crossing_row_count += 1
-
-        # Require at least a few rows of crossing text to confirm subheader
-        if has_subheader and crossing_row_count >= 5:
-            h_line_y_subheader = last_sub_crossing_row + 20
-            print(f"Subheader detected, ends at y={h_line_y_subheader} ({crossing_row_count} crossing rows)")
+    # Linia tiparita orizontala = semnal puternic, e valida indiferent de cat de
+    # sus apare. Doar fallback-ul pe linia verticala merita filtrul de inaltime.
+    if method == 'horizontal_rule':
+        if h_split_y is None or h_split_y < 10:   # doar sanity la marginea exacta
+            h_split_y = None
         else:
-            has_subheader = False
-            h_line_y_subheader = None
-            print(f"No subheader detected. (crossing rows: {crossing_row_count})")
+            print(f"TOP section ends at y={h_split_y} (horizontal rule)")
+    elif method == 'vertical_rule':
+        MIN_HEADER_H = max(40, h // 20)
+        if h_split_y is None or h_split_y < MIN_HEADER_H:
+            h_split_y = None
+            print(f"Vertical rule top prea sus ({h_split_y} < {MIN_HEADER_H}) -> ignor")
+        else:
+            print(f"TOP section ends at y={h_split_y} (vertical rule fallback)")
     else:
-        print("No header detected, skipping subheader search.")
+        h_split_y = None
+        print("No TOP section detected")
 
-    return v_line_x, h_line_y, h_line_y_subheader
+    return v_line_x, h_split_y, None
 
 
 def split_page_by_lines(image: np.ndarray, v_line_x: int, h_line_y: int = None, h_line_y_subheader: int = None):
@@ -151,30 +203,47 @@ def split_page_by_lines(image: np.ndarray, v_line_x: int, h_line_y: int = None, 
     Split page into parts based on detected layout lines.
     
     Returns:
-        If no header:                          tuple of (left, right)
-        If header only:                        tuple of (header, left, right)
-        If header + subheader:                 tuple of (header, subheader, left, right)
+        If no header:             tuple of (left, right)
+        If header only:           tuple of (header, left, right)
+        If header + subheader:    tuple of (header, subheader, left, right)
     """
     offset = 5
-    
+    h, w = image.shape[:2]
+
+    def safe_crop(img, y1, y2, x1, x2):
+        """Clamp coordinates and return None if crop would be empty."""
+        y1 = max(0, y1)
+        y2 = min(img.shape[0], y2)
+        x1 = max(0, x1)
+        x2 = min(img.shape[1], x2)
+        if y2 - y1 < 5 or x2 - x1 < 5:
+            return None
+        return img[y1:y2, x1:x2]
+
     if h_line_y is not None and h_line_y_subheader is not None:
-        # 4 parts: header, subheader, left, right
-        header = image[0 : h_line_y, :]
-        subheader = image[h_line_y + offset : h_line_y_subheader, :]
-        left_half = image[h_line_y_subheader + offset :, 0 : v_line_x - offset]
-        right_half = image[h_line_y_subheader + offset :, v_line_x + offset :]
-        return header, subheader, left_half, right_half
+        header    = safe_crop(image, 0,                        h_line_y,             0,              w)
+        subheader = safe_crop(image, h_line_y + offset,        h_line_y_subheader,   0,              w)
+        left_half = safe_crop(image, h_line_y_subheader + offset, h,                 0,              v_line_x - offset)
+        right_half= safe_crop(image, h_line_y_subheader + offset, h,                 v_line_x + offset, w)
+
+        # Dacă subheader-ul e gol (h_line_y ≈ h_line_y_subheader), degradează la 3 parts
+        if subheader is None:
+            parts = [p for p in (header, left_half, right_half) if p is not None]
+        else:
+            parts = [p for p in (header, subheader, left_half, right_half) if p is not None]
+
     elif h_line_y is not None:
-        # 3 parts: header, left, right
-        header = image[0 : h_line_y, :]
-        left_half = image[h_line_y + offset :, 0 : v_line_x - offset]
-        right_half = image[h_line_y + offset :, v_line_x + offset :]
-        return header, left_half, right_half
+        header    = safe_crop(image, 0,                h_line_y,  0,                  w)
+        left_half = safe_crop(image, h_line_y + offset, h,        0,                  v_line_x - offset)
+        right_half= safe_crop(image, h_line_y + offset, h,        v_line_x + offset,  w)
+        parts = [p for p in (header, left_half, right_half) if p is not None]
+
     else:
-        # 2 parts: left, right
-        left_half = image[0 :, 0 : v_line_x - offset]
-        right_half = image[0 :, v_line_x + offset :]
-        return left_half, right_half
+        left_half = safe_crop(image, 0, h, 0,                 v_line_x - offset)
+        right_half= safe_crop(image, 0, h, v_line_x + offset, w)
+        parts = [p for p in (left_half, right_half) if p is not None]
+
+    return tuple(parts)
 
 def denoise(image: np.ndarray, strength: int = 10) -> np.ndarray:
     """
@@ -314,34 +383,24 @@ def prepare_batch(pil_images: list[Image.Image],
         
         if split:
             # Detect layout lines
-            v_x, h_y, h_y_sub = detect_layout_lines(gray)
-            
+            # h_split_y = where the two-column body starts (top of printed rule)
+            v_x, h_split_y, _ = detect_layout_lines(gray)
+
+            labels_expected = ["top", "left", "right"] if h_split_y is not None else ["left", "right"]
+
             # Debug: draw detected lines
             debug_viz = cv2.cvtColor(gray, cv2.COLOR_GRAY2BGR)
-            # Vertical line (green) - always present
             cv2.line(debug_viz, (v_x, 0), (v_x, debug_viz.shape[0]), (0, 255, 0), 3)
-            # Horizontal line (red) - only if header detected
-            if h_y is not None:
-                cv2.line(debug_viz, (0, h_y), (debug_viz.shape[1], h_y), (0, 0, 255), 3)
-            if h_y_sub is not None:
-                cv2.line(debug_viz, (0, h_y_sub), (debug_viz.shape[1], h_y_sub), (255, 0, 0), 3)
+            if h_split_y is not None:
+                cv2.line(debug_viz, (0, h_split_y), (debug_viz.shape[1], h_split_y), (0, 0, 255), 3)
             inspect_step(f"page_{i+1}_2_layout_lines", debug_viz)
-            
-            # Split page
-            parts_data = split_page_by_lines(gray, v_x, h_y, h_y_sub)
-            
-            if h_y is not None and h_y_sub is not None:
-                # 4 parts: header, subheader, left, right
-                header, subheader, left, right = parts_data
-                halves = [("header", header), ("subheader", subheader), ("left", left), ("right", right)]
-            elif h_y is not None:
-                # 3 parts: header, left, right
-                header, left, right = parts_data
-                halves = [("header", header), ("left", left), ("right", right)]
-            else:
-                # 2 parts: left, right
-                left, right = parts_data
-                halves = [("left", left), ("right", right)]
+
+            # Split page: top (header) | left col | right col
+            parts_data = split_page_by_lines(gray, v_x, h_split_y, None)
+            n          = len(parts_data)
+
+            halves = [(labels_expected[j] if j < len(labels_expected) else f"part_{j}",
+                       parts_data[j]) for j in range(n)]
             
             # Debug: inspect each split part
             for label, part in halves:
@@ -380,13 +439,13 @@ def prepare_batch(pil_images: list[Image.Image],
 
 
 if __name__ == "__main__":
-    from extractpdf2 import extract_images_from_pdf
+    from ExtractImages import extract_images_from_pdf
 
-    pdf_file = "test2.pdf"
-    # raw_images = extract_images_from_pdf(pdf_file)
+    pdf_file = "pictures.pdf"
+    raw_images = extract_images_from_pdf(pdf_file, rotate=90)
 
 
     # raw_images = the only image from ../extracted_images/test2_page_40.png
-    raw_images = [Image.open("../extracted_images/test2_page_40.png")]
+    # raw_images = [Image.open("../extracted_images/test2_page_40.png")]
     prepared = prepare_batch(raw_images, output_dir="../preprocessed_images", split=True)
     print(f"Prepared {len(prepared)} images for OCR.")

@@ -1,0 +1,18 @@
+=== ORDINE NATIVA (Surya raw) ===
+  1. [0.99] 10
+  2. [1.00] aparent sfera cerească în jurul axei lumei. Ziua siderală este
+  3. [1.00] de fapt durata de rotație a Pământului în jurul axei sale
+  4. [0.96] și are 23 ore 56 minute timp mijlociu dat de ceasornicele
+  5. [1.00] noastre. Ziua siderală se împarte în 24 ore siderale, ora side-
+  6. [1.00] rală în 60 minute siderale și minuta în 60 secunde siderale.
+  7. [1.00] Dacă am potrivi un ceasornic ca să meargă 24 ore în
+  8. [1.00] timpul unei zile siderale, el se numește ceasornic (pendulă)
+  9. [1.00] Marele Ecuatorial dela Observatorul din Meudon (Franța)
+ 10. [1.00] cu diametrul de 83 centimetri.
+ 11. [1.00] sideral și timpul arătat de acest ceasornic se numește timp
+ 12. [1.00] sideral. S'a făcut învoiala ca ziua siderală să înceapă în mo-
+ 13. [1.00] mentul când un punct anumit după ecuator, numit punct ver-
+ 14. [0.99] nal, trece la meridianul locului. Atunci ceasornicul trebue po-
+ 15. [1.00] trivit să arate 0 ore, 0 minute și 0 secunde. Deocamdată vom
+ 16. [1.00] considera ca început al zilei siderale momentul când trece la
+ 17. [1.00] meridian steaua strălucitoare numită Rigel.

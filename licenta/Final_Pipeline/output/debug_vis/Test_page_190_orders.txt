@@ -1,0 +1,49 @@
+=== ORDINE NATIVA (Surya raw) ===
+  1. [0.92] 185
+  2. [0.84] In cazul când forțele sunt perpendiculare, avem
+  3. [0.94] <math>F_1 = R \cos \alpha</math>, <math>F_2 = R \cos \beta</math>, <math>R^2 = F_1^2 + F_2^2</math>.
+  4. [1.00] 141. Rezultanta mai multor forte concurente se obține
+  5. [1.00] compunând două din ele, apoi rezultanta lor cu a treia forță,
+  6. [1.00] compunând apoi rezultanta obținută cu a patra forță și așa mai
+  7. [0.99] departe. Rezultanta a două forțe F<sub>1</sub> și F<sub>2</sub> se mai obține ducând
+  8. [0.99] prin F<sub>1</sub> (Fig. 107) un vector F<sub>1</sub>R echipolent cu MF<sub>2</sub>, adică F<sub>1</sub>R
+  9. [0.98] egală și paralelă cu MF<sub>2</sub>. Deci, în cazul forțelor F<sub>1</sub>, F<sub>2</sub>, F<sub>3</sub>, F<sub>4</sub>
+ 10. [0.98] (Fig. 108), compunem forțele F<sub>1</sub> și F<sub>2</sub>, adică ducem F<sub>1</sub>A egală
+ 11. [0.96] și paralelă cu MF2; apoi compunem pe MA cu MF3, adică du-
+ 12. [0.99] cem AB egală și paralelă cu MF3;
+ 13. [0.96] în fine, compunem MB cu MF<sub>4</sub>, a-
+ 14. [1.00] dică ducem BR paralelă și egală cu
+ 15. [0.99] MF4. Rezultanta forțelor date este
+ 16. [0.99] MR.
+ 17. [0.69] În rezumat, rezultanta mai mul-
+ 18. [1.00] tor forte concurente, se obține con-
+ 19. [1.00] struind poligonul forțelor, adică du-
+ 20. [0.99] când (Fig. 108) prin extremitatea
+ 21. [0.71] B
+ 22. [0.90] W
+ 23. [0.96] unei forțe F<sub>1</sub> paralela și egala F<sub>1</sub>A
+ 24. [0.96] cu a doua, prin A paralela și egala
+ 25. [1.00] AB cu a treia, prin B paralela și
+ 26. [0.74] FI
+ 27. [1.00] egala BR cu a patra. Poligonul
+ 28. [0.99] Fig. 108.
+ 29. [0.99] MF1ABR ce zice poligonul fortelor,
+ 30. [1.00] iar rezultanta MR este linia care închide acest poligon.
+ 31. [1.00] 142. Echilibrul unui punct material. Un punct material
+ 32. [1.00] liber este în echilibru când rezul-
+ 33. [1.00] tanta forțelor care lucrează asupra
+ 34. [1.00] punctului este egală cu zero (nulă).
+ 35. [0.66] în acest caz, poligonul forțelor se
+ 36. [0.99] închide, punctul R din figura 108
+ 37. [0.95] R
+ 38. [0.77] M
+ 39. [1.00] vine în M, căci rezultanta MR este
+ 40. [1.00] zero.
+ 41. [1.00] Un punct material supus la ac-
+ 42. [0.94] țiunea a două forțe F<sub>1</sub> și F<sub>2</sub> este în
+ 43. [1.00] 
+ 44. [0.99] echilibru, când forțele F1 și F2 sunt
+ 45. [1.00] Fig. 109.
+ 46. [1.00] egale și direct opuse:
+ 47. [0.60] .Un punct material nu este liber dacă este supus să rămâe pe
+ 48. [1.00] o curbă sau pe o suprafață. Pentru ca un punct material M să

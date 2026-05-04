@@ -1,0 +1,31 @@
+=== ORDINE NATIVA (Surya raw) ===
+  1. [0.93] 192
+  2. [1.00] Deci valoarea forței atractive ce ține planeta în orbita sa
+  3. [0.94] este <math>F = m\gamma</math>.
+  4. [0.97] <math>F = m \frac{4\pi^2}{r^2} \frac{r^3}{r^2}</math>
+  5. [1.00] și de asemenea și pentru alte planete pe orbitele lor
+  6. [0.99] <math>F' = m' \frac{4\pi^2}{r^2} \frac{r'^3}{r'^2}, \qquad F'' = m'' \frac{4\pi^2}{r'^2} \frac{r''^3}{r''^2}, \dots</math>
+  7. [1.00] Dar, după legea a treia a lui Kepler, r fiind depărtarea mij-
+  8. [1.00] locie a planetei de Soare, avem
+  9. [0.99] <math>\frac{r^3}{T^2} = \frac{r'^3}{T'^3} = \frac{r''^3}{T'^3} = \cdots = k = \text{const.}</math>
+ 10. [0.92] Inlocuind în expresiile forțelor pe <math>\frac{r^3}{T^2}</math>, <math>\frac{r'^3}{T'^2}</math>, ... cu egala lor
+ 11. [0.90] k, obtinem
+ 12. [0.65] <math display="block">F = \frac{4\pi^2 km}{r^2}, \quad F' = \frac{4\pi^2 km'}{r^2}, \dots</math>
+ 13. [0.94] Punand:
+ 14. [0.97] <math>4\pi^2 k = \mu</math>, urmează că intensitatea forței care ține
+ 15. [1.00] o planetă în orbita ei este
+ 16. [0.92] <math>F=\frac{\mu m}{r^2}</math>
+ 17. [1.00] adică, invers proporțională cu pătratul distanței planetei de
+ 18. [0.99] Soare.
+ 19. [1.00] 147. Gravitatea universală. După ce Newton a descope-
+ 20. [1.00] rit legea care guvernează planetele în mișcarea lor în jurul
+ 21. [1.00] Soarelui, s'a întrebat dacă nu este tot aceeași lege care face
+ 22. [1.00] ca sateliții să se miște în jurul planetei respective și a făcut
+ 23. [1.00] această cercetare pentru Lună.
+ 24. [1.00] Se știa, din experiențele lui Galileu, asupra căderii corpu-
+ 25. [1.00] rilor, că spațiul descris de un corp în căderea lui este dat
+ 26. [0.96] de relația
+ 27. [0.94] <math>s=\frac{gt^2}{2}</math>
+ 28. [1.00] unge g este intensitatea gravității pământești, cu care este
+ 29. [1.00] atras corpul considerat către centrul Pământului. Valoarea lui g
+ 30. [0.98] se obține din relația precedentă făcând t=1 secundă, și apoi

@@ -439,10 +439,9 @@ def debug_visualize(
 
 
 if __name__ == "__main__":
-    # ---- EDITEAZA aceste 2 linii pentru imaginea ta -----------------------
-    image_path  = "./preprocessed_images/pictures_page_4.png"
-    output_path = "./output/debug_vis/pictures_page_4.png"
-    # -----------------------------------------------------------------------
+    
+    image_path  = "./preprocessed_images/Poza_page_2.png"
+    output_path = "./output/debug_vis/Poza_page_2.png"
 
     debug_visualize(
         image_path,

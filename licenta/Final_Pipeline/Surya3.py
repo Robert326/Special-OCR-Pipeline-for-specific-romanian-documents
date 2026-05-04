@@ -522,10 +522,7 @@ def _last_body_ends_with_sentence(blocks: List[Dict[str, Any]]) -> Optional[bool
             return _ends_with_sentence(b.get("text", ""))
     return None
 
-
-# ===========================================================================
 # ENTRY POINT
-# ===========================================================================
 if __name__ == "__main__":
     input_folder = "./preprocessed_images"
     output_folder = "./output/structured"

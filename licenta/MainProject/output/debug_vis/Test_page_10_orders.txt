@@ -1,0 +1,43 @@
+=== ORDINE NATIVA (Surya raw) ===
+  1. [0.92] 2
+  2. [0.94] 2. Sfera cerească. Pentru a studia mai cu ușurință poziția
+  3. [1.00] astrelor, vom considera o sferă ideală cu raza foarte mare,
+  4. [0.97] având centrul T în ochiul observatorului (Fig. 1). Pe aceasta
+  5. [0.99] vom proecta pozițiunile astrelor și o vom numi sferă cerească.
+  6. [1.00] Ca poziții ale astrelor A, B (Fig. 1),
+  7. [0.99] vom considera punctele a, b, unde
+  8. [0.94] sfera
+  9. [1.00] razele vizuale TA; TB
+ 10. [0.98] taie
+ 11. [0.99] cerească.
+ 12. [0.99] Distanța unghiulară a astrelor A
+ 13. [0.92] și B este unghiul ATB, format de
+ 14. [1.00] razele vizuale TA și TB, duse din
+ 15. [1.00] ochiul observatorului la astrele A și
+ 16. [0.95] Fig. 1.
+ 17. [0.97] B. Distanța unghiulară se măsoară
+ 18. [1.00] cu arcul de cerc mare ab, tras pe sfera cerească și n'are nici
+ 19. [1.00] o legătură cu distanța astrelor A și B exprimată în unități
+ 20. [0.99] de lungime.
+ 21. [1.00] Pentrucă raza sferei cerești este considerată foarte mare,
+ 22. [1.00] vom presupune că Pământul este redus la un singur punct,
+ 23. [1.00] așezat în centrul sferei cerești.
+ 24. [1.00] Stele. Planete. Măsurând distanțele unghiulare ale astrelor
+ 25. [1.00] la diferite intervale de timp, vom constata că cele mai multe
+ 26. [1.00] astre își păstrează distanțele lor unghiulare neschimbate, ceeace
+ 27. [1.00] probează că ele au, unele față de altele, aceleași poziții, sau
+ 28. [1.00] că ele formează figuri invariabile pe sfera cerească; aceste
+ 29. [1.00] astre se numesc stele:
+ 30. [1.00] Sunt și astre care își schimbă distanțele lor unghiulare față
+ 31. [1.00] de altele, cu alte cuvinte se mișcă pe sfera cerească printre
+ 32. [1.00] stele. Acestea sunt planetele, care se mai deosebesc de stele
+ 33. [1.00] și prin lumina lor; pe când lumina stelelor e vie și scântee-
+ 34. [1.00] toare, ca a Soarelui, a planetelor este mai liniștită, ca a
+ 35. [1.00] Lunei. Dacă privim stelele cu lunete cât de puternice, ele se
+ 36. [1.00] văd tot ca niște puncte luminoase, pe când planetele, fiind
+ 37. [1.00] astre mai apropiate de noi, după cum vom vedea, se observă
+ 38. [1.00] cu atât mai mari cu cât lunetele sunt mai puternice.
+ 39. [0.96] 3. Verticală. Orizont. Direcțiunea gravităței, adică direc-
+ 40. [0.91] țiunea ce o ia un fir ținut fix de un capăt, iar la celalt capăt
+ 41. [1.00] având atârnată o greutate (fir cu plumb), se numește verti-
+ 42. [0.99] cala acelui loc. Orice plan ce trece prin verticală se numește

@@ -1,0 +1,49 @@
+=== ORDINE NATIVA (Surya raw) ===
+  1. [0.98] 16
+  2. [1.00] puterea de mărire a lunetei, ecuatorialul servește și pentru studiul fizic-
+  3. [1.00] al planetelor, Lunei, Soarelui și astrelor. Acelaș studiu se poate face și cu
+  4. [0.97] telescopul (1).
+  5. [0.99] I. Luneta astronomică se compune esențial din două sisteme optice
+  6. [1.00] reunite cu un tub. Unul din sisteme, format dintr'o lentilă sau o com-
+  7. [1.00] binație de lentile, este îndreptat către obiectul care se observă; acesta
+  8. [1.00] se zice obiectiv și servește a da în focarul său principal, o imagine reală
+  9. [0.99] și răsturnată a acestui obiect. Această imagine este apoi observată cu
+ 10. [1.00] ajutorul celui de al doilea sistem optic, numit ocularul, la care se aplică
+ 11. [1.00] ochiul sau placa fotografică. Imaginea finală este deci răsturnată în
+ 12. [1.00] raport cu obiectul, ceeace nu are inconveniente în astronomie, unde se
+ 13. [1.00] observă corpuri sferice.
+ 14. [1.00] La o lunetă sunt mai multe condiții de îndeplinit. Mai întâi, obiec-
+ 15. [1.00] tivul trebue să fie acromatic, adică trebue să dea
+ 16. [1.00] imagini care să nu fie irizate pe marginile lor,
+ 17. [1.00] din cauza descompunerei luminei albe, ce ar re-
+ 18. [1.00] zulta din trecerea sa prin sticlele din care e
+ 19. [0.96] Crown
+ 20. [0.80] Flint
+ 21. [1.00] format. Se ajunge la aceasta, constituind obiec-
+ 22. [0.93] 91855
+ 23. [1.00] tivul prin suprapunerea a două lentile formate din
+ 24. [1.00] sticle cu puteri refringente diferite, una de sticlă
+ 25. [1.00] ordinară (crown glass), biconvexă, cealaltă, care
+ 26. [1.00] concavconvexă, așezată îndărătul primei,
+ 27. [0.96] este
+ 28. [1.00] este din cristal greu cu baza de plumb (flint
+ 29. [1.00] glass). Ocularul este compus din două lentile plan-convexe, dispuse a func-
+ 30. [1.00] ționa ca o lupă compusă, și se numește un ocular pozitiv; el este montat
+ 31. [1.00] pe un tub care alunecă în tubul principal al lunetei, pentru ca astfel să
+ 32. [1.00] permită punerea la punct pentru diferite vederi.
+ 33. [1.00] Se numeste diametrul aparent al unui obiect, unghiul format de razele
+ 34. [1.00] vizuale duse la cele două extremități ale obiectivului, la extremitățile unui
+ 35. [1.00] diametru, de ex., pentru un cerc văzut din față. Pentru o astră de formă
+ 36. [1.00] sferică, diametrul aparent este unghiul sub care se vede discul aparent
+ 37. [1.00] al astrei; razele vizuale care dau acest unghi sunt atunci tangente la sfera.
+ 38. [0.99] Puterea de mărire a unei lunete este raportul între diametrul aparent
+ 39. [1.00] al obiectului văzut cu luneta și diametrul aparent al aceluiași obiect văzut
+ 40. [1.00] cu ochiul liber; se arață că această putere de mărire G este egală cu
+ 41. [1.00] raportul distanțelor focale ale obiectivului și ocularului, F și f. Dacă
+ 42. [0.98] <math>F = 480</math> centimetri și <math>f = 1</math> centimetru, avem
+ 43. [0.99] <math>G = \frac{F}{f} = \frac{480}{1} = 480</math> ori.
+ 44. [1.00] Se zice câmpul lunetei regiunea din sfera cerească văzută prin acest
+ 45. [1.00] instrument. Acest camp este în general apreciat în grade, minute și se-
+ 46. [1.00] cunde. Cum ocularul este cu atât mai mic cu cât el mărește mai mult,
+ 47. [0.90] (1) Invenția telescopului se datorește probabil preoților jezuiți Zucchi
+ 48. [0.90] și Mersena (către 1616).

@@ -70,8 +70,8 @@ def extract_images_from_pdf(pdf_path: str, output_dir: str = None, rotate: int =
 
 
 if __name__ == "__main__":
-    pdf_file = "./PDF's/Poza.pdf"
-    output_folder = "./extracted_images"
+    pdf_file = "./PDF's/Test.pdf"
+    output_folder = "./preprocessed_images"
 
     extracted = extract_images_from_pdf(pdf_file, output_folder, rotate=90)
     print(f"Extracted {len(extracted)} images.")

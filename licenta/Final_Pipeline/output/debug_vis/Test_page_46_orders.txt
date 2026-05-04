@@ -1,0 +1,42 @@
+=== ORDINE NATIVA (Surya raw) ===
+  1. [0.99] 41
+  2. [0.95] sud-est la nord-vest în emisferul austral. Deci, din cauza
+  3. [1.00] rotații Pământului, aceste vânturi alizee în loc să sufle de la
+  4. [1.00] nord spre sud, sau dela sud spre nord, suflă dela nord-est la
+  5. [0.99] sud-vest în emisferul boreal și dela sud-vest la nord-vest în
+  6. [0.98] emisferul austral. Vânturile păturilor superioare sau contra-
+  7. [0.94] alizee vor sufla dela sud-vest către nord-est în emisferul nord
+  8. [0.89] și dela nord-vest la sud-est în emisferul austral.
+  9. [0.98] Din cauza rotațiunei Pământului, orice mișcare de pe supra-
+ 10. [0.95] fața Pământului este deviată, în emisfera boreală în spre
+ 11. [1.00] dreapta, dacă am sta cu fața în direcția în care se face miș-
+ 12. [0.97] carea, iar în emisfera australă, spre stânga. Aceasta se ob-
+ 13. [1.00] servă în direcția generală a curenților marini. Tot astfel se
+ 14. [0.99] explică de ce apele mari, ca Dunărea, caută să mănânce mai
+ 15. [1.00] mult din malurile drepte ale lor.
+ 16. [0.99] 34. A trebuit multă vreme oamenilor de știință până când
+ 17. [1.00] au reușit să dovedească că Pământul se mișcă.
+ 18. [0.79] Încă din antichitate unii filozofi (1) au încercat să arate a
+ 19. [0.96] ceasta, dar abia, pe la 1600 d. Chr., Galileu, un mare astronom
+ 20. [1.00] și fizician, a susținut cu tărie, acest adevăr, arătat înaintea lui
+ 21. [0.95] de Copernic (1472-1543), deși a avut să lupte cu puterea
+ 22. [1.00] bisericei catolice, care nu voia să admită această teorie, ca
+ 23. [0.99] fiind în contrazicere cu Biblia.
+ 24. [1.00] Din cele expuse mai sus, rezultă că mișcarea diurnă a sferei
+ 25. [1.00] cerești este aparentă și că Pământul se învârtește, în mod
+ 26. [0.99] uniform de la apus la răsărit, în sens direct (invers cu àcele
+ 27. [0.98] unui ceasornic) în jurul unei axe care îl tae în două puncte nu-
+ 28. [1.00] mite polul nord și polul sud. Aceasta este axa lumei de la miș-
+ 29. [1.00] aparentă. Durata rotației este constantă, este
+ 30. [0.86] carea diurnă
+ 31. [1.00] ziua siderală și are 23 ore, 56 minute, 4 secunde timp mijlociu
+ 32. [1.00] (acela arătat de ceasornicele noastre).
+ 33. [0.96] Punctele unui meridian nefiind egal depărtate de axa de
+ 34. [1.00] rotație, nu descriu toate paralele egale în jurul axei, astfel
+ 35. [1.00] că lungimile acestor cercuri paralele cresc de la poli către
+ 36. [1.00] ecuator. Cum însă aceste paralele sunt descrise în acelaș
+ 37. [1.00] timp, ziua siderală, urmează că viteza pe paralelele mai lungi
+ 38. [1.00] este mai mare. Astfel, un punct de la ecuator se miscă cu o
+ 39. [1.00] viteză de 465 metri pe secundă; la Paris, viteza este 306
+ 40. [0.99] metri, iar la poli nulă.
+ 41. [0.94] (1) Anaximandru (VI secol a. Cr.), Pitagora (V secol a. Cr.).

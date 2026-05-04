@@ -1,0 +1,41 @@
+=== ORDINE NATIVA (Surya raw) ===
+  1. [0.98] 203
+  2. [1.00] putut determina elementele în multe cazuri. Cum distanța a-
+  3. [0.99] cestor stele a putut fi determinată, s'au aflat dimensiunile, în
+  4. [1.00] kilometri de ex., a orbitei relative descrisă de o stea în jurul
+  5. [1.00] companionului său. Această mișcare se face conform primelor
+  6. [1.00] două legi ale lui Kepler. S'a recunoscut, astfel, că legea atrac-
+  7. [0.96] țiunei lui Newton se aplică și la universul stelar. S'a putut de-
+  8. [1.00] termina, ca și în cazul Soarelui, massa acestor stele duble, și
+  9. [1.00] calculul a fost făcut pentru 150 sisteme, adică pentru 300 stele.
+ 10. [1.00] S'a văzut că aceste masse sunt mari cel mult cât de patru ori
+ 11. [1.00] massa Soarelui și cel puțin cât jumătatea massei Soarelui;
+ 12. [1.00] astfel, a Centaur are ca sumă a masselor de 2 ori aceea a Soa-
+ 13. [0.99] relui, Eridan cât a Soarelui, η Cassiopea de 4 ori mai mare ca
+ 14. [1.00] a Soarelui. Sunt și excepții, căci s'a descoperit un sistem ale
+ 15. [1.00] cărui cele două componente au împreună o massă de 180 ori
+ 16. [1.00] mai mare ca aceea a Soarelui, ceeace face cel puțin 90 de ori
+ 17. [1.00] pentru fiecare din ele.
+ 18. [1.00] 153. Evoluția stelelor. Dacă se ține seamă de valorile mijlo-
+ 19. [1.00] cii, stelele gigante au massa de 5 ori mare ca aceea a celor pi-
+ 20. [1.00] tice. Cum raportul volumelor este egal cu un milion, putem
+ 21. [1.00] admite că densitatea gigantelor este de 200.000 ori mai mică
+ 22. [1.00] decât a stelelor pitice. Acesta este aproximativ raportul den-
+ 23. [1.00] sităților normale a hidrogenului și platinei, gazul cel mai ușor
+ 24. [0.88] și metalul cel mai dens. Cum acest rezultat a fost obținut con-
+ 25. [1.00] siderând cazurile mijlocii, se vede că în cazurile extreme, se
+ 26. [1.00] obțin diferențe de 10 ori mai mari.
+ 27. [1.00] Considerarea densităților ne permit de a aranja într'un șir
+ 28. [1.00] continuu clasele spectrale definitive, ținând seamă și de gi-
+ 29. [1.00] gante și de pitice. Iată în ordinea densităților descrescătoare
+ 30. [0.99] și a evoluției stelelor:
+ 31. [0.99] Gigante M, K, G, F. - Stele A și B. - Pitice F, G, K, M.
+ 32. [1.00] Dacă se admite că materia constitutivă inițială este aceeaș,
+ 33. [1.00] culoarea diferită a stelelor arată că ele sunt la diferite stadii
+ 34. [1.00] ale evoluției lor. Precizând ideile lui Lockyer, Russel a emis
+ 35. [1.00] ideea că stelele, în cursul vieței lor, trec de două ori prin
+ 36. [1.00] aceleași aparențe spectrale și a propus următoarea schemă re-
+ 37. [1.00] lativă la evoluția stelelor. Orice stea se detașează din nebuloasă
+ 38. [1.00] în starea unei stele puțin condensată și rece, adică gigantă M.
+ 39. [1.00] Din cauza gravitației, se condensează puțin câte puțin, își mic-
+ 40. [1.00] șorează volumul și se mărește presiunea, degajându se căldură

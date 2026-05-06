@@ -17,7 +17,7 @@ import os
 
 from PySide6.QtWidgets import (
     QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
-    QSplitter, QPushButton, QStatusBar, QLabel, QFrame,
+    QSplitter, QPushButton, QStatusBar, QLabel, QFrame, QComboBox,
 )
 from PySide6.QtCore import Qt, Slot
 
@@ -37,18 +37,18 @@ class MainWindow(QMainWindow):
     def __init__(self, parent=None):
         super().__init__(parent)
 
-        # ── Output paths (all local to MainProject/) ─────────────────────────
+        # Output paths (all local to MainProject/)
         _base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         self.preprocessed_dir = os.path.join(_base, "preprocessed_images")
         self.output_dir       = os.path.join(_base, "output")
         self.debug_vis_dir    = os.path.join(self.output_dir, "debug_vis")
         self.structured_dir   = os.path.join(self.output_dir, "structured")
 
-        # ── Runtime state ────────────────────────────────────────────────────
+        # Runtime state
         self._extracted_images: list[str] = []
         self._page_modes: dict[str, str]  = {}   # path → "Surya3" | "SuryaNORMAL"
 
-        # ── Active workers (None = idle) ─────────────────────────────────────
+        # Active workers (None = idle)
         self._extraction_worker: ExtractionWorker | None = None
         self._ocr_worker:        OcrWorker        | None = None
         self._debug_worker:      DebugWorker       | None = None
@@ -60,9 +60,7 @@ class MainWindow(QMainWindow):
         self._build_ui()
         self._connect_signals()
 
-    # =========================================================================
     # UI construction
-    # =========================================================================
     def _build_ui(self):
         central = QWidget()
         self.setCentralWidget(central)
@@ -70,13 +68,13 @@ class MainWindow(QMainWindow):
         root.setContentsMargins(6, 6, 6, 4)
         root.setSpacing(4)
 
-        # ── Top: PDF input ────────────────────────────────────────────────────
+        # Top: PDF input
         self.pdf_panel = PdfInputPanel()
         root.addWidget(self.pdf_panel)
 
         root.addWidget(_hsep())
 
-        # ── Middle: three-column splitter ─────────────────────────────────────
+        # Middle: three-column splitter
         h_split = QSplitter(Qt.Orientation.Horizontal)
 
         # Left column: gallery
@@ -110,7 +108,7 @@ class MainWindow(QMainWindow):
 
         root.addWidget(_hsep())
 
-        # ── Bottom: action buttons ─────────────────────────────────────────────
+        # Bottom: action buttons 
         btn_bar = QHBoxLayout()
         btn_bar.setContentsMargins(0, 0, 0, 0)
         btn_bar.setSpacing(8)
@@ -127,19 +125,32 @@ class MainWindow(QMainWindow):
         self.btn_ocr.setStyleSheet(  _btn_style("#2a7acc"))
         self.btn_llm.setStyleSheet(  _btn_style("#6a3acc"))
 
+        self.llm_model_combo = QComboBox()
+        self.llm_model_combo.addItems([
+            "gemma3:12b",
+            "mistral-small",
+            "jobautomation/OpenEuroLLM-Romanian",
+            "qwen2.5:14b-instruct-q4_K_M",
+            "qwen2.5:7b-instruct-q5_K_M",
+            "gemma3:4b",
+        ])
+        self.llm_model_combo.setFixedHeight(38)
+        self.llm_model_combo.setMinimumWidth(200)
+        self.llm_model_combo.setToolTip("Selecteaza modelul Ollama pentru corectia LLM")
+
         btn_bar.addWidget(self.btn_debug)
         btn_bar.addWidget(self.btn_ocr)
         btn_bar.addWidget(self.btn_llm)
+        btn_bar.addWidget(QLabel("Model:"))
+        btn_bar.addWidget(self.llm_model_combo)
         root.addLayout(btn_bar)
 
-        # ── Status bar ────────────────────────────────────────────────────────
+        # Status bar
         self._status = QStatusBar()
         self.setStatusBar(self._status)
         self._status.showMessage("Ready — drop a PDF to begin.")
 
-    # =========================================================================
     # Signal wiring
-    # =========================================================================
     def _connect_signals(self):
         self.pdf_panel.extraction_requested.connect(self._on_extract)
         self.gallery_panel.page_selected.connect(self._on_page_selected)
@@ -148,9 +159,7 @@ class MainWindow(QMainWindow):
         self.btn_ocr.clicked.connect(self._on_ocr)
         self.btn_llm.clicked.connect(self._on_llm)
 
-    # =========================================================================
     # Extraction
-    # =========================================================================
     @Slot(str, str, int, int)
     def _on_extract(self, pdf_path: str, mode: str, rotate: int, dpi: int):
         if self._worker_busy(self._extraction_worker, "Extraction"):
@@ -179,9 +188,7 @@ class MainWindow(QMainWindow):
         self.log_widget.ok(f"Gallery loaded — {len(image_paths)} pages.")
         self._set_buttons_enabled(True)
 
-    # =========================================================================
     # Gallery interactions
-    # =========================================================================
     @Slot(str)
     def _on_page_selected(self, image_path: str):
         """Show existing debug output (if any) when user clicks a tile."""
@@ -206,9 +213,7 @@ class MainWindow(QMainWindow):
     def _on_mode_changed(self, image_path: str, mode: str):
         self._page_modes[image_path] = mode
 
-    # =========================================================================
     # Debug
-    # =========================================================================
     @Slot()
     def _on_debug(self):
         selected = self.gallery_panel.selected_pages()
@@ -243,9 +248,7 @@ class MainWindow(QMainWindow):
                     open(sidecar, encoding="utf-8").read()
                 )
 
-    # =========================================================================
     # OCR
-    # =========================================================================
     @Slot()
     def _on_ocr(self):
         if not self._extracted_images:
@@ -276,9 +279,7 @@ class MainWindow(QMainWindow):
         self.ocr_results_panel.add_page_result(name, text)
         self.gallery_panel.mark_ocr_done(image_path)
 
-    # =========================================================================
     # LLM
-    # =========================================================================
     @Slot()
     def _on_llm(self):
         combined = os.path.join(self.structured_dir, "structured_all.txt")
@@ -290,12 +291,13 @@ class MainWindow(QMainWindow):
         if self._worker_busy(self._llm_worker, "LLM"):
             return
 
+        model_name = self.llm_model_combo.currentText()
         corrected = os.path.join(self.structured_dir, "structured_all_corrected.txt")
-        self.log_widget.info("Starting Mistral LLM correction…")
-        self._status.showMessage("Running LLM correction…")
+        self.log_widget.info(f"Starting LLM correction with {model_name}…")
+        self._status.showMessage(f"Running LLM correction ({model_name})…")
         self._set_buttons_enabled(False)
 
-        w = LlmWorker(combined, corrected)
+        w = LlmWorker(combined, corrected, model_name)
         w.log_line.connect(self.log_widget.info)
         w.page_corrected.connect(self._on_llm_page_done)
         w.error.connect(self.log_widget.error)
@@ -308,9 +310,7 @@ class MainWindow(QMainWindow):
         self.log_widget.ok(f"LLM ✓  {page_name}")
         self.llm_panel.add_page(page_name, corrected)
 
-    # =========================================================================
     # Helpers
-    # =========================================================================
     def _on_worker_finished(self, label: str):
         self.log_widget.ok(f"{label} finished.")
         self._status.showMessage(f"{label} complete — ready.")
@@ -332,7 +332,7 @@ class MainWindow(QMainWindow):
         self.btn_llm.setEnabled(llm_ready)
 
 
-# ─── tiny helpers ──────────────────────────────────────────────────────────────
+# tiny helpers
 def _hsep() -> QFrame:
     sep = QFrame()
     sep.setFrameShape(QFrame.Shape.HLine)

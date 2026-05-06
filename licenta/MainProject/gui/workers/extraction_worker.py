@@ -6,9 +6,9 @@ Mode "good"  → ExtractImages.extract_images_from_pdf()
 Mode "bad"   → ExtractBadImages.extract_images_from_pdf()
 
 Emits:
-  log_line(str)        – progress messages
-  images_ready(list)   – sorted list of absolute image paths after extraction
-  error(str)           – fatal error message
+  log_line(str)        - progress messages
+  images_ready(list)   - sorted list of absolute image paths after extraction
+  error(str)           - fatal error message
 """
 import glob
 import os

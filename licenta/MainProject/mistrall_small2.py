@@ -35,9 +35,7 @@ from typing import List, Tuple
 import requests
 
 
-# ===========================================================================
 # CONFIG
-# ===========================================================================
 # Endpoint-ul Ollama. /api/generate = completion simpla (prompt + system).
 OLLAMA_URL = "http://localhost:11434/api/generate"
 
@@ -49,9 +47,7 @@ TEMPERATURE = 0.0          # vrem deterministic, nu creativitate
 NUM_CTX = 4096             # cat context ii dai modelului (mistral-small suporta mult)
 REQUEST_TIMEOUT = 600      # secunde (modelele locale pot fi lente)
 
-# ===========================================================================
 # PROMPT
-# ===========================================================================
 SYSTEM_PROMPT = """Esti un corector de text OCR in limba romana. Textul de mai jos a fost extras automat dintr-un document oficial romanesc si contine erori tipice de OCR.
 
 !!! CRITIC — CITESTE INAINTE DE ORICE !!!
@@ -97,9 +93,7 @@ FORMAT DE RASPUNS (OBLIGATORIU):
 - PASTREAZA ETICHETELE [TITLE] SI [BODY] FIX UNDE SUNT ELE SITUATE"""
 
 
-# ===========================================================================
 # HELPERS
-# ===========================================================================
 def call_llm(session: requests.Session, text: str) -> str:
     """Trimite textul la Ollama si intoarce raspunsul brut."""
     payload = {
@@ -131,9 +125,7 @@ def correct_page(session: requests.Session, text: str, page_id: str = "") -> Tup
         return text, False
 
 
-# ===========================================================================
 # PARSARE FISIER COMBINAT
-# ===========================================================================
 PAGE_HEADER_RE = re.compile(r"^=== (.+?) ===\s*$", re.MULTILINE)
 
 
@@ -155,9 +147,7 @@ def split_combined(text: str) -> List[Tuple[str, str]]:
     return pages
 
 
-# ===========================================================================
 # PIPELINES
-# ===========================================================================
 def process_combined_file(input_path: str, output_path: str):
     """Corecteaza un fisier cu mai multe pagini (separate prin === ... ===)."""
     session = requests.Session()
@@ -259,9 +249,7 @@ def process_folder(input_dir: str, output_dir: str):
     print(f"\nGata. Total {total_time:.1f}s. Iesire: {output_dir}")
 
 
-# ===========================================================================
 # ENTRY POINT
-# ===========================================================================
 if __name__ == "__main__":
     # Alege modul: "combined" (un singur fisier cu mai multe pagini)
     #              "folder"   (un folder cu .txt per pagina)

@@ -4,13 +4,13 @@ One card in the gallery representing a single extracted page.
 
 Visuals:
   - Checkbox  (for batch debug / select-all)
-  - Thumbnail (130 × 160)
-  - Status badge  (—  /  DBG ✓  /  OCR ✓  /  DBG+OCR ✓)
+  - Thumbnail (130 x 160)
+  - Status badge  (—  /  DBG   /  OCR   /  DBG+OCR )
   - [S3] [SN] toggle buttons (Surya3 / SuryaNORMAL)
 
 Signals:
-  selected(image_path)          – emitted on click anywhere on the tile
-  mode_changed(image_path, mode) – emitted when S3/SN toggle changes
+  selected(image_path)          - emitted on click anywhere on the tile
+  mode_changed(image_path, mode) - emitted when S3/SN toggle changes
 """
 from PySide6.QtWidgets import (
     QFrame, QVBoxLayout, QHBoxLayout, QLabel,

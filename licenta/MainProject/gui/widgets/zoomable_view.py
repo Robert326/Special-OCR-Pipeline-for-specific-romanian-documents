@@ -19,7 +19,7 @@ Resize behaviour:
   - After the user zooms manually → freeze scale on resize (don't fight them)
 
 Signals:
-  zoom_changed(float)   – current scale factor (1.0 = 100 %)
+  zoom_changed(float)   - current scale factor (1.0 = 100 %)
 """
 from PySide6.QtWidgets import QGraphicsView, QGraphicsScene
 from PySide6.QtCore import Qt, Signal

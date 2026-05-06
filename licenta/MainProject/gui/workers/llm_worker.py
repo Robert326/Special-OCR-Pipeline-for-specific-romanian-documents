@@ -1,13 +1,13 @@
 """
 LlmWorker
-QThread that runs Mistral LLM correction on the combined OCR output.
+QThread that runs LLM correction on the combined OCR output.
 
-Reads structured_all.txt, corrects each page via Ollama,
-writes structured_all_corrected.txt.
+Supports any Ollama model (gemma3:12b, mistral-small, etc.) via model_name.
+Uses llm_postCorection as backend (pre-cleanup regex + anti-hallucination checks).
 
 Emits:
   log_line(str)
-  page_corrected(page_name, corrected_text)   – after each page
+  page_corrected(page_name, corrected_text)   - after each page
   error(str)
 """
 import os
@@ -24,24 +24,28 @@ class LlmWorker(QThread):
         self,
         input_path: str,    # structured_all.txt
         output_path: str,   # structured_all_corrected.txt
+        model_name: str,    # e.g. "gemma3:12b" or "mistral-small"
         parent=None,
     ):
         super().__init__(parent)
         self.input_path  = input_path
         self.output_path = output_path
+        self.model_name  = model_name
 
     def run(self):
         try:
             import requests
-            from mistrall_small2 import split_combined, correct_page
+            import llm_postCorection as backend
+
+            backend.OLLAMA_MODEL = self.model_name
 
             self.log_line.emit(f"Reading: {self.input_path}")
             with open(self.input_path, "r", encoding="utf-8") as f:
                 raw = f.read()
 
-            pages = split_combined(raw)
+            pages = backend.split_combined(raw)
             total = len(pages)
-            self.log_line.emit(f"Pages to correct: {total}")
+            self.log_line.emit(f"Model: {self.model_name} | Pages to correct: {total}")
 
             out_dir = os.path.dirname(self.output_path) or "."
             os.makedirs(out_dir, exist_ok=True)
@@ -57,14 +61,12 @@ class LlmWorker(QThread):
                     continue
 
                 self.log_line.emit(f"[{i}/{total}] LLM: {name}…")
-                corrected, ok = correct_page(session, content, page_id=name)
-                status = "OK" if ok else "FAILED (kept original)"
-                self.log_line.emit(f"  → {status}")
+                corrected, status = backend.correct_page(session, content, page_id=name)
+                self.log_line.emit(f"  -> {status}")
                 out_chunks.append(f"=== {name} ===\n{corrected}\n")
 
-                # Per-page file: llm_<stem>.txt  (e.g. llm_Test_page_1.txt)
-                stem        = os.path.splitext(name)[0]
-                page_path   = os.path.join(out_dir, f"llm_{stem}.txt")
+                stem      = os.path.splitext(name)[0]
+                page_path = os.path.join(out_dir, f"llm_{stem}.txt")
                 with open(page_path, "w", encoding="utf-8") as f:
                     f.write(corrected)
                 self.log_line.emit(f"  → saved {os.path.basename(page_path)}")
@@ -73,7 +75,7 @@ class LlmWorker(QThread):
 
             with open(self.output_path, "w", encoding="utf-8") as f:
                 f.write("\n".join(out_chunks))
-            self.log_line.emit(f"Saved corrected output → {self.output_path}")
+            self.log_line.emit(f"Saved corrected output -> {self.output_path}")
 
         except Exception as exc:
             self.error.emit(f"LlmWorker: {exc}")

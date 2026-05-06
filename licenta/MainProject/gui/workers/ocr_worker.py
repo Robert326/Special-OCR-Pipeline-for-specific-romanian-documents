@@ -12,7 +12,7 @@ Surya predictors are initialised ONCE and reused across all pages.
 
 Emits:
   log_line(str)
-  page_done(image_path, text)   – after each page
+  page_done(image_path, text)   - after each page
   error(str)
 """
 import os
@@ -87,7 +87,7 @@ class OcrWorker(QThread):
             combined_path = os.path.join(self.output_dir, "structured_all.txt")
             with open(combined_path, "w", encoding="utf-8") as f:
                 f.write("\n".join(combined_chunks))
-            self.log_line.emit(f"Combined OCR saved → {combined_path}")
+            self.log_line.emit(f"Combined OCR saved -> {combined_path}")
 
         except Exception as exc:
             self.error.emit(f"OcrWorker fatal: {exc}")

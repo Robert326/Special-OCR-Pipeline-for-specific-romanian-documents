@@ -56,7 +56,7 @@ class DebugWorker(QThread):
                     from DebugSuryaPaginaNormala import debug_visualize_single_column
                     debug_visualize_single_column(img_path, debug_png)
 
-                self.log_line.emit(f"  → {debug_png}")
+                self.log_line.emit(f"  -> {debug_png}")
                 self.page_done.emit(img_path, debug_png, sidecar)
 
             except Exception as exc:

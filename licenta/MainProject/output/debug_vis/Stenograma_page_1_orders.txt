@@ -1,0 +1,79 @@
+=== ORDINE NATIVA (Surya raw) ===
+  1. [0.65] It dev.
+  2. [0.95] ARHIVA<br>Comitetului Politic Executiv
+  3. [0.96] STENOGRAMA
+  4. [1.00] al C.C. al P.C.R.
+  5. [0.99] Nr. 1969 /20 VII. 1977
+  6. [1.00] şedinței de lucru cu activul de partid al Capitalei și specialiștii care se ocupă de repararea și consolidarea imobilelor avariate de
+  7. [1.00] cutremurul din 4 martie 1977, din ziua de 4 iulie 1977
+  8. [1.00] Au participat tovarășii: Nicolae Ceaușescu, Manea Mănescu,
+  9. [0.63] Ilie Verdet, Ion Dincă, Iosif Banc, Iosif Uglar, Ion Stănescu.
+ 10. [1.00] De asemenea, au luat parte: Biroul Comitetului municipal de partid
+ 11. [0.70] și Comitetul Executiv al Consiliului Popular al Municipiului Bucu-
+ 12. [1.00] rești, birourile comitetelor de partid și o parte a membrilor comi-
+ 13. [1.00] tetelor executite ale consiliile populare din cele 8 æctoare ale
+ 14. [1.00] 
+ 15. [1.00] Capitalei, proiectanți, arhitecți, constructori și alte cadre de
+ 16. [1.00] specialitate care participă la acțiunea de reparare și consolidare
+ 17. [0.95] STENOGRAMA
+ 18. [1.00] a imobilelor avariate de seism.
+ 19. [0.99] Tov. Nicolae Ceauşescu:
+ 20. [0.76] Capitalei și specialiștii care se ocupă de
+ 21. [0.98] Poftim, tovarășe Dincă.
+ 22. [0.97] Tov. Ion Dincă:
+ 23. [0.53] avariate de cutremurul din 4 martie 1977.
+ 24. [1.00] Tovarășe secretar general,
+ 25. [0.80] - 4 iulie 1977 -
+ 26. [1.00] Permiteți-mi să vă raportez situația în legătură cu repara-
+ 27. [1.00] țiile de imobile și social-culturale din Capitala noastră. Total
+ 28. [0.98] imobile de locuit cu P+4 etaje identificate pe fiecare sector în
+ 29. [1.00] parte care au fost avariate și care necesită consolidări și repa-
+ 30. [1.00] rații sînt 351 de imobile; sînt în curs de consolidare 114 imobile
+ 31. [0.83] și cu proiecte în curs de elaborare 237 de imobile.
+ 32. [0.99] In conformitate cu programul pe care îl supunem spre aprobare,
+ 33. [1.00] eşalonarea terminării lucrărilor este următoarea în concepția
+ 34. [0.99] noastră: în trimestrul III.1977 să dăm în funcțiune 157 de imobile
+ 35. [0.64] și în trimestrul IV.1977 - 194 imobile, în felul acesta încheind
+ 36. [0.99] acțiunea pe Capitală cu toate blocurile mai mari de P+4.
+ 37. [1.00] Din inventarierea făcută imediat după seismul din 4 martie,
+ 38. [0.98] în Capitală au fost inventariate 14.063 imobile, dar care nu presu-
+
+=== ORDINE CUSTOM (column-aware) ===
+  1. [0.65][left  ] It dev.
+  2. [0.95][left  ] ARHIVA<br>Comitetului Politic Executiv
+  3. [1.00][left  ] al C.C. al P.C.R.
+  4. [0.99][left  ] Nr. 1969 /20 VII. 1977
+  5. [1.00][left  ] 
+  6. [0.95][left  ] STENOGRAMA
+  7. [0.76][left  ] Capitalei și specialiștii care se ocupă de
+  8. [0.53][left  ] avariate de cutremurul din 4 martie 1977.
+  9. [0.80][left  ] - 4 iulie 1977 -
+ 10. [0.96][right ] STENOGRAMA
+ 11. [1.00][right ] şedinței de lucru cu activul de partid al Capitalei și specialiștii care se ocupă de repararea și consolidarea imobilelor avariate de
+ 12. [1.00][right ] cutremurul din 4 martie 1977, din ziua de 4 iulie 1977
+ 13. [1.00][right ] Au participat tovarășii: Nicolae Ceaușescu, Manea Mănescu,
+ 14. [0.63][right ] Ilie Verdet, Ion Dincă, Iosif Banc, Iosif Uglar, Ion Stănescu.
+ 15. [1.00][right ] De asemenea, au luat parte: Biroul Comitetului municipal de partid
+ 16. [0.70][right ] și Comitetul Executiv al Consiliului Popular al Municipiului Bucu-
+ 17. [1.00][right ] rești, birourile comitetelor de partid și o parte a membrilor comi-
+ 18. [1.00][right ] tetelor executite ale consiliile populare din cele 8 æctoare ale
+ 19. [1.00][right ] Capitalei, proiectanți, arhitecți, constructori și alte cadre de
+ 20. [1.00][right ] specialitate care participă la acțiunea de reparare și consolidare
+ 21. [1.00][right ] a imobilelor avariate de seism.
+ 22. [0.99][right ] Tov. Nicolae Ceauşescu:
+ 23. [0.98][right ] Poftim, tovarășe Dincă.
+ 24. [0.97][right ] Tov. Ion Dincă:
+ 25. [1.00][right ] Tovarășe secretar general,
+ 26. [1.00][right ] Permiteți-mi să vă raportez situația în legătură cu repara-
+ 27. [1.00][right ] țiile de imobile și social-culturale din Capitala noastră. Total
+ 28. [0.98][right ] imobile de locuit cu P+4 etaje identificate pe fiecare sector în
+ 29. [1.00][right ] parte care au fost avariate și care necesită consolidări și repa-
+ 30. [1.00][right ] rații sînt 351 de imobile; sînt în curs de consolidare 114 imobile
+ 31. [0.83][right ] și cu proiecte în curs de elaborare 237 de imobile.
+ 32. [0.99][right ] In conformitate cu programul pe care îl supunem spre aprobare,
+ 33. [1.00][right ] eşalonarea terminării lucrărilor este următoarea în concepția
+ 34. [0.99][right ] noastră: în trimestrul III.1977 să dăm în funcțiune 157 de imobile
+ 35. [0.64][right ] și în trimestrul IV.1977 - 194 imobile, în felul acesta încheind
+ 36. [0.99][right ] acțiunea pe Capitală cu toate blocurile mai mari de P+4.
+ 37. [1.00][right ] Din inventarierea făcută imediat după seismul din 4 martie,
+ 38. [0.98][right ] în Capitală au fost inventariate 14.063 imobile, dar care nu presu-

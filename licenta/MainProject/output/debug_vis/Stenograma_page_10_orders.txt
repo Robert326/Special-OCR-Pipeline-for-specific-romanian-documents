@@ -1,0 +1,113 @@
+=== ORDINE NATIVA (Surya raw) ===
+  1. [0.56] - 18 -
+  2. [0.63] - 19 -
+  3. [0.58] MANDO
+  4. [0.99] Tov.Adriana Moraru:
+  5. [0.99] Tov. Adriana Moraru:
+  6. [0.97] S-a executat, tovarășe secretar general.
+  7. [0.99] Cetățenii, să vedem care este situația imobilelor.
+  8. [0.99] Tov. Nicolae Ceauşescu:
+  9. [0.99] Tov. Nicolae Ceauşescu:
+ 10. [0.98] Păi cum s-a executat, dacă au funcționat în continuare.
+ 11. [0.99] Cîţi cetăţeni v-au dat afară din imobile, asta cunoşti?
+ 12. [0.99] Tov. Adriana Moraru:
+ 13. [0.99] Tov. Adriana Moraru:
+ 14. [0.99] Aceasta am făcut-o în primele zile, noi.
+ 15. [0.99] Pe noi să ne dea afară?
+ 16. [0.99] Tov. Nicolae Ceauşescu:
+ 17. [0.92] Tov.Nicolae Ceauşescu:
+ 18. [0.99] Nu, în primele zile nu puteați să verificați 2000 de
+ 19. [0.68] Da, da.
+ 20. [0.98] blocuri.
+ 21. [0.99] Tov. Adriana Moraru:
+ 22. [0.66] NU.
+ 23. [0.99] Tov. Adriana Moraru:
+ 24. [0.97] Nu blocuri.
+ 25. [0.98] Tov. Nicolae Ceauşescu:
+ 26. [0.99] Tov. Nicolae Ceauşescu:
+ 27. [0.99] Echipele voastre, nu pe voi, că voi n-ați mers să stați
+ 28. [0.99] De imobile, păi astea-s blocuri, mai mari sau mai mici,
+ 29. [1.00] de vorbă cu cetățenii, că v-ați boierit. Echipele care au fost, cîți
+ 30. [0.99] imobile. Comisii au funcționat pînă acum 3 zile în toată Capitala.
+ 31. [0.99] au fost dați afară?
+ 32. [0.99] Tov. Adriana Moraru:
+ 33. [0.99] Tov. Adriana Moraru:
+ 34. [0.99] Nu, nu am avut comisii, s-a mers numai la cererea locata-
+ 35. [0.99] Nu, nu au fost dați afară, tovarășe secretar....
+ 36. [1.00] rilor, la sesizări să vedem dacă ceea ce se sesizează este corect
+ 37. [0.95] Tov. Nicolae Ceauşescu:
+ 38. [1.00] sau nu este corect, adică pe baza scrisorilor venite de la
+ 39. [0.99] Nu, bine, am să vă arăt eu cîţi au fost daţi afară.
+ 40. [0.99] populație. Noi am știut că în felul acesta....
+ 41. [0.96] Tov. Adriana Moraru:
+ 42. [0.98] Tov. Nicolae Ceauşescu:
+ 43. [0.96] .... de la noi și s-a stabilit precis ce anume este de repa-
+ 44. [0.99] Cine a dat ICRAL-lui ăsta sau cum îi spune, dispoziția ca
+ 45. [1.00] rat și ce nu este de reparat.
+ 46. [0.99] să oprească pe cetățeni să-și facă reparațiile.
+ 47. [0.97] Tov. Nicolae Ceauşescu:
+ 48. [0.99] Tov. Adriana Moraru:
+ 49. [0.98] Si s-a dat o dispoziție pentru Capitală să se oprească
+ 50. [0.99] Nu i-am oprit, ci, din contră i-am ajutat pe cetăţeni,
+ 51. [0.97] încă de la lo martie să nu mai funcționeze o comisie. De ce nu s-a
+ 52. [1.00] tovarășe secretar general.
+ 53. [0.99] executat această dispoziție?
+ 54. [0.83] ./.
+ 55. [0.81] ./.
+
+=== ORDINE CUSTOM (column-aware) ===
+  1. [0.56][left  ] - 18 -
+  2. [0.58][left  ] MANDO
+  3. [0.99][left  ] Tov. Adriana Moraru:
+  4. [0.99][left  ] Cetățenii, să vedem care este situația imobilelor.
+  5. [0.99][left  ] Tov. Nicolae Ceauşescu:
+  6. [0.99][left  ] Cîţi cetăţeni v-au dat afară din imobile, asta cunoşti?
+  7. [0.99][left  ] Tov. Adriana Moraru:
+  8. [0.99][left  ] Pe noi să ne dea afară?
+  9. [0.92][left  ] Tov.Nicolae Ceauşescu:
+ 10. [0.68][left  ] Da, da.
+ 11. [0.99][left  ] Tov. Adriana Moraru:
+ 12. [0.66][left  ] NU.
+ 13. [0.98][left  ] Tov. Nicolae Ceauşescu:
+ 14. [0.99][left  ] Echipele voastre, nu pe voi, că voi n-ați mers să stați
+ 15. [1.00][left  ] de vorbă cu cetățenii, că v-ați boierit. Echipele care au fost, cîți
+ 16. [0.99][left  ] au fost dați afară?
+ 17. [0.99][left  ] Tov. Adriana Moraru:
+ 18. [0.99][left  ] Nu, nu au fost dați afară, tovarășe secretar....
+ 19. [0.95][left  ] Tov. Nicolae Ceauşescu:
+ 20. [0.99][left  ] Nu, bine, am să vă arăt eu cîţi au fost daţi afară.
+ 21. [0.96][left  ] Tov. Adriana Moraru:
+ 22. [0.96][left  ] .... de la noi și s-a stabilit precis ce anume este de repa-
+ 23. [1.00][left  ] rat și ce nu este de reparat.
+ 24. [0.97][left  ] Tov. Nicolae Ceauşescu:
+ 25. [0.98][left  ] Si s-a dat o dispoziție pentru Capitală să se oprească
+ 26. [0.97][left  ] încă de la lo martie să nu mai funcționeze o comisie. De ce nu s-a
+ 27. [0.99][left  ] executat această dispoziție?
+ 28. [0.81][left  ] ./.
+ 29. [0.63][right ] - 19 -
+ 30. [0.99][right ] Tov.Adriana Moraru:
+ 31. [0.97][right ] S-a executat, tovarășe secretar general.
+ 32. [0.99][right ] Tov. Nicolae Ceauşescu:
+ 33. [0.98][right ] Păi cum s-a executat, dacă au funcționat în continuare.
+ 34. [0.99][right ] Tov. Adriana Moraru:
+ 35. [0.99][right ] Aceasta am făcut-o în primele zile, noi.
+ 36. [0.99][right ] Tov. Nicolae Ceauşescu:
+ 37. [0.99][right ] Nu, în primele zile nu puteați să verificați 2000 de
+ 38. [0.98][right ] blocuri.
+ 39. [0.99][right ] Tov. Adriana Moraru:
+ 40. [0.97][right ] Nu blocuri.
+ 41. [0.99][right ] Tov. Nicolae Ceauşescu:
+ 42. [0.99][right ] De imobile, păi astea-s blocuri, mai mari sau mai mici,
+ 43. [0.99][right ] imobile. Comisii au funcționat pînă acum 3 zile în toată Capitala.
+ 44. [0.99][right ] Tov. Adriana Moraru:
+ 45. [0.99][right ] Nu, nu am avut comisii, s-a mers numai la cererea locata-
+ 46. [1.00][right ] rilor, la sesizări să vedem dacă ceea ce se sesizează este corect
+ 47. [1.00][right ] sau nu este corect, adică pe baza scrisorilor venite de la
+ 48. [0.99][right ] populație. Noi am știut că în felul acesta....
+ 49. [0.98][right ] Tov. Nicolae Ceauşescu:
+ 50. [0.99][right ] Cine a dat ICRAL-lui ăsta sau cum îi spune, dispoziția ca
+ 51. [0.99][right ] să oprească pe cetățeni să-și facă reparațiile.
+ 52. [0.99][right ] Tov. Adriana Moraru:
+ 53. [0.99][right ] Nu i-am oprit, ci, din contră i-am ajutat pe cetăţeni,
+ 54. [1.00][right ] tovarășe secretar general.
+ 55. [0.83][right ] ./.

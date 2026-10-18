@@ -1,0 +1,7 @@
+surya-ocr
+PySide6
+pymupdf
+opencv-python
+numpy
+Pillow
+requests
